@@ -1,0 +1,108 @@
+<div class="contents">
+	<form id="uploadFiles">
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-6 col-md-6 control-label font-lineHeight list-item-text-nowrap">
+			    	<i class="fa fa-square-o fa-lg mouse-pointer send-btn" id="toResponses"></i>
+			    	回文
+			    </div>
+			    <input type="hidden" id="responses_doc" value="0">
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-2 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+			    	承辦
+			    </div>
+			    <div class="col-xs-10 col-md-2 control-label font-lineHeight">
+			    	<i class="fa fa-user-plus fa-lg mouse-pointer send-btn" id="principalUserAdd"></i>
+			    </div>
+			    <div class="col-xs-12 col-md-8 control-label font-lineHeight" id="principalInfo">
+			    </div>
+			    <input type="hidden" id="pricipalId" class="userInput">
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+			    	承辦事項(限定50字)
+			    </div>
+			    <div class="col-xs-12 col-md-12">
+			    	<textarea class="form-control userInput item-textarea-height" maxlength="50" id="Desc"></textarea>
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+			    	預警日期
+			    </div>
+			    <div class="col-xs-12 col-md-2 control-label font-lineHeight">
+			    	<i class="fa fa-calendar fa-lg mouse-pointer send-btn" id="endDateSelectBtn"></i>
+			    </div>
+			    <div class="col-xs-12 col-md-8 control-label font-lineHeight" id="endDateSelectInfo">
+			    	尚未設定日期
+			    </div>
+			    <div class="col-xs-12 col-md-12 control-label font-lineHeight item-hide" id="endDateSelect">
+			    </div>
+			    <input type="hidden" id="endDate" class="userInput">
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+			    	到期日期
+			    </div>
+			    <div class="col-xs-12 col-md-2 control-label font-lineHeight">
+			    	<i class="fa fa-calendar fa-lg mouse-pointer send-btn" id="expiryDateSelectBtn"></i>
+			    </div>
+			    <div class="col-xs-12 col-md-8 control-label font-lineHeight" id="expiryDateSelectInfo">
+			    	尚未設定日期
+			    </div>
+			    <div class="col-xs-12 col-md-12 control-label font-lineHeight item-hide" id="expiryDateSelect">
+			    </div>
+			    <input type="hidden" id="expiry_date" class="userInput">
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items" id="assistArea">
+			<div class="form-group">
+			    <div class="col-xs-2 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+			    	協辦細項
+			    </div>
+			    <div class="col-xs-10 col-md-10 control-label font-lineHeight">
+			    	<i class="fa fa-plus fa-lg mouse-pointer send-btn" id="assistAddBtn"></i>
+			    </div>
+			    <div class="col-xs-12 col-md-12 control-label font-lineHeight" id="assistInfo">
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+			    	來文附件
+			    </div>
+			    <div class="col-xs-12 col-md-10 control-label font-lineHeight" id="originalFileInfo">
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+			    	額外附件
+			    </div>
+			    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+			   		<i class="fa fa-cloud-upload fa-lg mouse-pointer send-btn" id="principalFile"></i>
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items" id="isSelectFile" style="display:none;">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+			    	已選擇檔案
+			    </div>
+			    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+			    </div>
+			</div>
+		</div>
+	</form>
+</div>

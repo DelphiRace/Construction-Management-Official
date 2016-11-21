@@ -1,0 +1,166 @@
+<div class="contents">
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+			<div class="col-xs-3 col-md-3 control-label font-lineHeight">
+				正本
+			</div>
+			<div class="col-xs-9 col-md-9 control-label font-lineHeight f-right">
+				<i class="fa fa-plus send-btn mouse-pointer"></i>
+			</div>
+			<div class="col-xs-12 col-md-12 control-label font-lineHeight" id="originalTarget">
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+			<div class="col-xs-3 col-md-3 control-label font-lineHeight">
+				副本
+			</div>
+			<div class="col-xs-9 col-md-9 control-label font-lineHeight f-right">
+				<i class="fa fa-plus send-btn mouse-pointer"></i>
+			</div>
+			<div class="col-xs-12 col-md-12 control-label font-lineHeight" id="duplicateTarget">
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-3 control-label font-lineHeight">
+		    	發文期限
+		    </div>
+		    <div class="col-xs-12 col-md-1 control-label font-lineHeight">
+		    	<i class="fa fa-calendar fa-lg mouse-pointer send-btn" id="dispatchEndDateCalendar"></i>
+		    </div>
+		    <div class="col-xs-12 col-md-5 control-label font-lineHeight" id="dispatchEndDateContent">
+		    	尚未選擇日期
+		    </div>
+		    <div class="col-xs-12 col-md-12 control-label font-lineHeight dateSelectArea">
+		    	<div id="dispatchEndDateSelect"></div>
+		    </div>
+		    <input type="hidden" class="userInput" id="dispatch_end_date">
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+			<div class="col-xs-12 col-md-3 control-label font-lineHeight">
+				關聯文號
+			</div>
+			<div class="col-xs-12 col-md-9 control-label font-lineHeight">
+				<i class="fa fa-pencil-square-o fa-lg send-btn mouse-pointer" id="docReferenceAdd"></i>
+			</div>
+			<div class="col-xs-12 col-md-12 control-label font-lineHeight" id="docReferenceSelectInfo">
+		    </div>
+		    <input type="hidden" id="according">
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-3 control-label font-lineHeight">
+		    	速別
+		    </div>
+		    <div class="col-xs-10 col-md-8 control-label font-lineHeight">
+		    	<select class="form-control userInput" id="level_id">
+		    	</select>
+		    </div>
+		    <div class="col-xs-2 col-md-1 control-label font-lineHeight">
+		    	<i class="fa fa-refresh send-btn mouse-pointer" id="level_id_refresh"></i>
+		    </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-3 control-label font-lineHeight">
+		    	密等
+		    </div>
+		    <div class="col-xs-12 col-md-8 control-label font-lineHeight">
+		    	<select class="form-control userInput" id="isopycnic_id">
+		    	</select>
+		    </div>
+		    <div class="col-xs-2 col-md-1 control-label font-lineHeight">
+		    	<i class="fa fa-refresh send-btn mouse-pointer" id="isopycnic_id_refresh"></i>
+		    </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+		    	發文字號
+		    </div>
+		    <div class="col-xs-12 col-md-9">
+		      <select class="form-control userInput" id="prefix"></select>
+		    </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+		    	主旨
+		    </div>
+		    <div class="col-xs-12 col-md-9">
+		      <input type="text" class="form-control userInput" id="subject">
+		    </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-12 control-label font-lineHeight list-item-text-nowrap">
+		    	說明
+		    </div>
+		    <div class="col-xs-12 col-md-12">
+		      <textarea class="form-control item-textarea-height userInput" id="explanation"></textarea>
+		    </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+		    	承辦人
+		    </div>
+		    <div class="col-xs-12 col-md-9 control-label font-lineHeight" id="pointPeople">
+		    </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+		    	關鍵字
+		    </div>
+		    <div class="col-xs-12 col-md-9">
+		      <input type="text" class="form-control userInput" id="key_word">
+		    </div>
+		    <div class="col-xs-12 col-md-12 control-label font-lineHeight">
+		      多個請以","進行分隔
+		    </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-6 col-md-6 control-label font-lineHeight list-item-text-nowrap">
+		    	<i class="fa fa-square-o fa-lg mouse-pointer send-btn"  id="track"></i>
+		    	追蹤
+		    </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+		    	附件
+		    </div>
+		    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+		   		<i class="fa fa-cloud-upload fa-lg mouse-pointer send-btn"></i>
+		   		<form class="item-hide" id="uploadFiles"></form>
+		    </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-12 list-items" id="isSelectFile" style="display:none;">
+		<div class="form-group">
+		    <div class="col-xs-12 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+		    	已選擇檔案
+		    </div>
+		    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+		   		
+		    </div>
+		</div>
+	</div>
+	
+</div>

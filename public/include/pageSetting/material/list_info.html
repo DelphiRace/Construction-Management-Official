@@ -1,0 +1,38 @@
+<input type='hidden' id='inp_uid' value='@@uid@@'>
+<input type='hidden' id='inp_date' value='@@date@@'>
+<input type='hidden' id='inp_count' value='@@count@@'>
+<input type='hidden' id='inp_quid' value='@@quid@@'>
+<table style="border:5px #cccccc solid;" rules="all" cellpadding='5';>
+	<tr algin='center'>
+		<th COLSPAN=3>進料申請單</th>
+	</tr>
+
+	<tr>
+		<th ROWSPAN=3>廠商資訊</th><td>訂單編號:@@no@@</td><td>公司名稱:@@cpname@@</td>
+	</tr>
+	<tr>
+		<td>品項：@@mname@@</td>
+		<td>數量：@@count@@</td>
+
+	</tr>
+	<tr>
+		<td>聯絡人:@@keyman@@</td>
+		<td>電話:@@phone@@</td>
+		
+	</tr>
+	<tr>
+		<th ROWSPAN=3>申請人資訊</th>
+		<td>申請人:@@aname@@</td>
+		<td >電話:@@aphone@@</td>
+	</tr>
+	<tr>
+		
+		<td>放置地點:@@place@@</td>
+		<td>施作部位:@@mplace@@</td>
+	</tr>
+	<tr>
+		<td COLSPAN=2>預計進場時間：@@date@@</td>
+	</tr>
+</table>
+<button id='btn_check' style="display:@@btn_check@@;" onclick='infocheck()'>確認</button>
+<button id='btn_in'  style="display:@@btn_in@@;" onclick='infoin()'>進場</button>

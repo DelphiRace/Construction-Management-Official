@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="col-xs-12 col-md-12">
+
+            <div id="loadpageArea">
+                <div align="center">
+                    <b><span>勞安設定</span></b>
+                </div>
+                <form id='cform'  method="post">
+                    <div>
+                    <input type='hidden' id='isnew' value="">
+                    <input type='hidden' name='type' value="laborsafety">
+                        
+                        <div class="col-xs-12 col-md-12 item-margin-top">
+                            <div class="col-xs-12 col-md-12 list-items-bottom">
+                                    工地勞工安全衛生事項之督導、公共環境與安全之維護及其他工地行政事項：
+                            </div>
+                             <textarea rows="5" class="form-control col-xs-12 col-md-12 item-margin-top" name='fifth'id="fifth"></textarea>
+                        </div>
+                        <div class="col-xs-12 col-md-12 item-margin-top">
+                            <div class="col-xs-12 col-md-12 list-items-bottom">
+                                    通知協力廠商辦理事項：
+                            </div>
+                            <textarea rows="5" class="form-control col-xs-12 col-md-12 item-margin-top" 
+                            name='seventh' id="seventh"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-xs-12 col-md-12 item-margin-top f-right">
+                    <i class="fa fa-floppy-o fa-2x send-btn" onclick='savelaborsafety()' id="send"></i>
+                </div>
+            </div>
+        </div>
+        <script src="include/js/contentpages/logbook/logbook.js"></script>
+    </body>
+</html>

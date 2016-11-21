@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>建築物雲端全生命週期履歷平台</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="../include/strongly/assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../include/strongly/assets/css/main.css" />
+        <link rel="stylesheet" href="../include/css/jquery-ui.min.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="../include/strongly/assets/css/ie8.css" /><![endif]-->
+		<!-- Scripts -->
+		<script src="../include/strongly/assets/js/jquery.min.js"></script>
+        <script src="../include/js/jquery/jquery-ui.min.js"></script>
+		<script src="../include/strongly/assets/js/jquery.dropotron.min.js"></script>
+		<script src="../include/strongly/assets/js/skel.min.js"></script>
+		<script src="../include/strongly/assets/js/skel-viewport.min.js"></script>
+		<script src="../include/strongly/assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="../include/strongly/assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="../include/js/config/config.js"></script>
+		<script src="../include/js/lang/langSet.js"></script>
+        <script src="../include/js/page/ctrl.js"></script>
+        <script src="../include/js/page/check_login.js"></script>
+        <script src="../include/js/page/topMenu.js"></script>
+		<script src="../include/strongly/assets/js/main.js"></script>
+	    <script src="/include/js/jquery/jquery.PrintArea.js"></script>
+	    <script src="/include/js/page/qc/photolist.js"></script>
+		<style type="text/css">
+			.phtr{
+				border:1px #cccccc solid ;
+				vertical-align:middle;
+			}
+		</style>
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header" class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="./">建築物施工管理雲端系統</a></h1>
+						<!-- Nav -->
+							<nav id="nav">
+								<div style="float:right;">
+									<span>Hi, @@userName@@ 歡迎回來</span>
+								</div>
+								<!--選單-->
+								<ul id="menus">
+									<li><a class="icon fa-home" href="./"><span>首頁</span></a></li>
+									<li><a class="icon fa-retweet" href="#" onclick="logoutEven();"><span>Logout</span></a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div id="main" class="container">
+						<div class="row">
+
+							<!-- Content -->
+								<div id="content" class="12u 12u(mobile)">
+
+									<!-- Post -->
+										<article class="box post">
+											<div >
+											    <input align="center" onclick="print();" type="button" value="列印">
+											    <input align="center" onclick="save();" type="button" value="存檔">
+											</div>
+											<div id='div_print' align='center' style='margin: 0px auto;'>
+											    <table width='90%' > 
+											      <tr  align='center'>
+											        <td >
+											          <b><span id='title' style="font-size:x-large;"></span></b>
+											        </td>
+											      </tr>
+											      <tr  align='center'>
+											        <td >
+											          <span id="d_title"></span>
+											          <span><u>材料進場查驗照片<u/></span>
+											        </td>
+											      </tr>
+											      <tr align="right">
+											      		<td>
+											      			日期<select id="d_select"></seelct>
+											      		</td>
+											      </tr>
+											      <tr >
+											        <td align='left'>
+											          <span>主辦機關：</span><br>
+											          <span>專案管理單位：</span><br>
+											          <span>監造廠商：</span><br>
+											          <span>承包廠商：</span>
+											         </td>
+											      </tr>
+											    </table>
+											   <table id='photolist' width='90%' class='phtr'  rules="all" cellpadding='5'>
+											    </table>
+											    <div align='center' id="dialog" title="" >
+											    	<img src='../include/images/loading.gif'>
+											    </div>
+											</div>		
+										</article>
+
+								</div>
+
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<div id="footer" class="container">
+					</div>
+					<div id="copyright" class="container">
+						<ul class="links">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: HTML5 UP  </li>
+						</ul>
+					</div>
+				</div>
+
+		</div>
+
+		
+
+	</body>
+</html>

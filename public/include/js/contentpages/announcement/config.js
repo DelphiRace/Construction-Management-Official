@@ -1,0 +1,1 @@
+var announcementAPI = "V201606/News/api/News/";

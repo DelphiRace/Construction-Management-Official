@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+	<head>
+
+		<!-- Bootstrap CSS -->
+		<!-- <link href="include/css/bootstrap.min.css" rel="stylesheet"> -->
+		<!-- <link href="include/css/font-awesome.min.css" rel="stylesheet"> -->
+		<!-- <link href="include/css/ctrl-style.css" rel="stylesheet"> -->
+		<!-- <link href="include/css/jquery-ui.min.css" rel="stylesheet"> -->
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<!-- jQuery -->
+		<!-- <script src="include/js/jquery/jquery.min.js"></script> -->
+		<!-- <script src="include/js/jquery/jquery-ui.min.js"></script> -->
+		<!-- Bootstrap JavaScript -->
+		<script src="include/js/bootstrap/bootstrap.min.js"></script>
+		<script src="include/js/bootstrap/bootstrap-treeview.js"></script>
+		<script src="include/js/main/treeData.js"></script>
+		<script src="include/js/main/tab.js"></script>
+		<!-- <script src="include/js/config/config.js"></script> -->
+		<link href="include/css/bootstrap-treeview.css" rel="stylesheet">
+	</head>
+	<body>
+		<article class="box post">
+			<div class="container ">
+		      	<div class="row item-margin-top tree-menus">
+		      		<!--左邊選單-->
+					<div class="col-xs-12 col-md-4">
+						<div id="treeview"></div>
+					</div>
+					<!--內容-->
+					<div class="col-xs-12 col-md-8 item-display-n" id="select-nodeContents">
+						<!--相關頁籤-->
+						<ul class="nav nav-tabs" id="nodesSetting">
+							<li role="presentation" class="active"><a href="#" id="nodeData">資料設定</a></li>
+							<li role="presentation"><a href="#" id="nodeOption">項目設定</a></li>
+						</ul>
+						<!--資料設定-->
+						<div class="col-xs-12 col-md-12 tab-border tab-content" id="nodeData-content"></div>
+						<!--節點設定-->
+						<div class="col-xs-12 col-md-12 tab-border item-display-n tab-content" id="nodeOption-content"></div>
+					</div>
+				</div>
+				<div class="err_msg"></div>
+		    </div>
+	    </article>
+
+		<script type="text/javascript" src="include/js/contentpages/space/space.js"></script>		
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<div class="data-rows col-xs-12 col-md-12">
+	<div class="data-rows col-xs-12 col-md-12">
+		<input type="hidden" id="modifyID"/>
+		<table class="table">
+			<tr>
+				<td rowspan="7" class="col-xs-5 col-md-5">
+					<img width="100%" id="thisPhoto">
+				</td>
+				<th class="f-right">身分證號</th>
+				<td>
+					<input type="text" class="form-control userInput user_id" placeholder="身分證號" aria-describedby="basic-addon1" id="user_id" name="user_id">
+				</td>
+			</tr>
+			<tr>
+				<th class="f-right">名　　字</th>
+				<td>
+					<input type="text" class="form-control userInput userName" placeholder="名字" aria-describedby="basic-addon1" id="name" name="name">
+				</td>
+			</tr>
+			<tr>
+				<th class="f-right">臨時卡號</th>
+				<td>
+					<div id="number"></div>
+				</td>
+			</tr>
+			<tr>
+				<th class="f-right">廠商名稱</th>
+				<td>
+					<input type="text" class="form-control userInput company" placeholder="廠商名稱" aria-describedby="basic-addon1" id="company" name="company">
+				</td>
+			</tr>
+			<tr>
+				<th class="f-right">電　　話</th>
+				<td>
+					<input type="text" class="form-control userInput phone" placeholder="電話" aria-describedby="basic-addon1" id="phone" name="phone">
+				</td>
+			</tr>
+			<tr>
+				<th class="f-right">換證日期</th>
+				<td>
+					<div id="use_date"></div>
+				</td>
+			</tr>
+			<tr>
+				<th class="f-right">目　　的</th>
+				<td>
+					<div class="purpose" id="purpose"></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="f-right">
+					<!--儲存-->
+					<i class="fa fa-check mouse-pointer fa-lg" onclick="tmpCardDataSaveBtn($(this));"></i>
+					<i class="glyphicon glyphicon-remove mouse-pointer fa-lg" onclick="closeDialog('tmpCardDataMana_dialog');"></i>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

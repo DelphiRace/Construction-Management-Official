@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Login Page</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="../include/assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../include/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../include/assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../include/assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="../include/assets/css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><script src="../include/assets/js/respond.min.js"></script><![endif]-->
+		<script src="../include/js/jquery/jquery-1.11.3.min.js"></script>
+		<script src="../include/js/bootstrap/bootstrap.min.js"></script>
+		<script src="../include/js/config/config.js"></script>
+        <script src="../include/js/page/ctrl.js"></script>
+		<script>
+			$(function(){
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			});
+		</script>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="../include/images/login_icon.jpg" alt="" width="80%" /></span>
+							<h1>Login</h1>
+							<p>Type Your Info</p>
+							<form method="post" id="loginInfo">
+								<div class="field">
+									<input type="text" name="userAc" id="userAc" placeholder="Accound" />
+								</div>
+								<div class="field">
+									<input type="password" name="userPw" id="userPw" placeholder="Password" />
+								</div>
+								<ul class="actions">
+									<li><a href="#" class="button" onclick="loginEven(); return false;">Sign in</a></li>
+									<li><a href="#">Forgot Password?</a></li>
+								</ul>
+							</form>
+							<h2 id="loginMsg"></h2>
+						</header>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Login System</li>
+							<li>Design: Race</li>
+						</ul>
+					</footer>
+
+			</div>
+		
+		
+	</body>
+</html>

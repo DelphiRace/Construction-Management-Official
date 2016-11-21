@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script src="include/js/jquery/jquery.form.min.js"></script>
+	</head>
+	<body>
+	<!-- ========================= 本次設計開始 ========================= -->				
+		<!-- 標題 -->
+		<div class="col-xs-12 col-md-12 item-title text-center">
+			<h3 class="col-xs-10 col-md-11">個人承辦收發文紀錄</h3>
+			<div class="col-xs-2 col-md-1 item-title-plus">
+				<i class="fa fa-plus-circle fa-2x send-btn mouse-pointer" id="pageInsertBtn" onclick="tabInsert();"></i>
+				<i class="fa fa-plus-square-o fa-2x send-btn mouse-pointer" onclick="signInfoAndDate();"></i>
+			</div>
+		</div>
+		<!-- 頁籤 -->
+		<ul class="nav nav-tabs" id="totalTab">
+			<li role="presentation" class="active">
+				<a href="#" id="received">收文<span class="badge"></span></a>
+			</li>
+			<li role="presentation">
+				<a href="#" id="sendDoc">發文<span class="badge"></span></a>
+			</li>
+			<li role="presentation">
+				<a href="#" id="signBack">退件<span class="badge"></span></a>
+			</li>
+		</ul>
+		<!-- 內容 -->
+		<div class="col-xs-12 col-md-12 tab-border totalTab-tab-content" id="received-content">
+			<!-- 列表內容 -->
+			<div class="col-xs-12 col-md-12 list-item-title text-center">
+				<div class="col-xs-5 col-md-2 list-items">
+					文號
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					主旨
+				</div>
+				<div class="col-xs-4 col-md-1 list-items">
+					速別
+				</div>
+				<div class="col-xs-4 col-md-2 list-items">
+					預警
+				</div>
+				<div class="col-xs-4 col-md-1 list-items">
+					狀態
+				</div>
+				<div class="col-xs-3 col-md-1 list-items">
+					&nbsp;
+				</div>
+			</div>
+			<!-- 列表內容 -->
+			<div class="col-xs-12 col-md-12 list-items-bottom">
+				<div class="col-xs-5 col-md-2 list-items">
+					業00123456789
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					有關施工流程修繕
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					速
+				</div>
+				<div class="col-xs-4 col-md-2 list-items text-center list-item-hide-text">
+					2016-06-30
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					收文
+				</div>
+				<div class="col-xs-3 col-md-1 text-center list-items">
+					<div class="item-actionBtn">
+						<i class="fa fa-file-text-o fa-lg send-btn mouse-pointer" onclick="testBs5Show();"></i>
+						<i class="fa fa-sitemap fa-lg send-btn mouse-pointer" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items-bottom">
+				<div class="col-xs-5 col-md-2 list-items">
+					業00123456789
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					有關施工流程修繕
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					速
+				</div>
+				<div class="col-xs-4 col-md-2 list-items text-center list-item-hide-text">
+					2016-06-30
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					分文
+				</div>
+				<div class="col-xs-3 col-md-1 text-center list-items">
+					<div class="item-actionBtn">
+						<i class="fa fa-file-text-o fa-lg send-btn mouse-pointer" onclick="testBs5Show();"></i>
+						<i class="fa fa-chain-broken fa-lg send-btn mouse-pointer" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items-bottom">
+				<div class="col-xs-5 col-md-2 list-items">
+					業00123455555
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					有關水泥工程
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					最速
+				</div>
+				<div class="col-xs-4 col-md-2 list-items text-center list-item-hide-text">
+					2016-06-25
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					辦理中
+				</div>
+				<div class="col-xs-3 col-md-1 text-center list-items">
+					<div class="item-actionBtn">
+						<i class="fa fa-file-text-o fa-lg send-btn mouse-pointer" onclick="testBs6Show()"></i>
+						<i class="fa fa-check-circle-o fa-lg send-btn mouse-pointer" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-md-12">
+				<div class="col-xs-5 col-md-2 list-items">
+					營0012346666
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					有關地基工程
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					普
+				</div>
+				<div class="col-xs-4 col-md-2 list-items text-center">
+					-
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text received-finish">
+					完成
+				</div>
+				<div class="col-xs-3 col-md-1 text-center list-items">
+					<div class="item-actionBtn">
+						<i class="fa fa-file-text-o fa-lg send-btn mouse-pointer" onclick=""></i>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 列表內容結束 -->
+		</div>
+
+		<!-- 內容 -->
+		<div class="col-xs-12 col-md-12 tab-border totalTab-tab-content" id="sendDoc-content">
+			<!-- 列表內容 -->
+			<div class="col-xs-12 col-md-12 list-item-title text-center">
+				<div class="col-xs-5 col-md-2 list-items">
+					文號
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					主旨
+				</div>
+				<div class="col-xs-4 col-md-1 list-items">
+					密等
+				</div>
+				<div class="col-xs-4 col-md-2 list-items">
+					預警
+				</div>
+				<div class="col-xs-4 col-md-1 list-items">
+					狀態
+				</div>
+				<div class="col-xs-3 col-md-1 list-items">
+					&nbsp;
+				</div>
+			</div>
+			<!-- 列表內容 -->
+			<div class="col-xs-12 col-md-12 list-items-bottom">
+				<div class="col-xs-5 col-md-2 list-items">
+					克林0012346666
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					有關模板工程
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					普
+				</div>
+				<div class="col-xs-4 col-md-2 list-items text-center">
+					2016-06-15
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					簽核中
+				</div>
+				<div class="col-xs-3 col-md-1 text-center list-items">
+					<div class="item-actionBtn">
+						<i class="fa fa-list-alt fa-lg mouse-pointer send-btn" onclick=""></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items-bottom">
+				<div class="col-xs-5 col-md-2 list-items">
+					克林0012346666
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					有關模板工程
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					普
+				</div>
+				<div class="col-xs-4 col-md-2 list-items text-center">
+					2016-06-29
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					會簽畢
+				</div>
+				<div class="col-xs-3 col-md-1 text-center list-items">
+					<div class="item-actionBtn">
+						<i class="fa fa-list-alt fa-lg mouse-pointer send-btn" onclick=""></i>
+						<i class="fa fa-pencil-square-o fa-lg"></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items-bottom">
+				<div class="col-xs-5 col-md-2 list-items">
+					克林0012346666
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					有關模板工程
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					普
+				</div>
+				<div class="col-xs-4 col-md-2 list-items text-center">
+					2016-06-29
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text received-back">
+					退件
+				</div>
+				<div class="col-xs-3 col-md-1 text-center list-items">
+					<div class="item-actionBtn">
+						<i class="fa fa-list-alt fa-lg mouse-pointer send-btn" onclick=""></i>
+						<i class="fa fa-pencil-square-o fa-lg"></i>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-md-12">
+				<div class="col-xs-5 col-md-2 list-items">
+					營0012346666
+				</div>
+				<div class="col-xs-4 col-md-5 list-items">
+					有關地基工程
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					普
+				</div>
+				<div class="col-xs-4 col-md-2 list-items text-center">
+					-
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text received-finish">
+					完成
+				</div>
+				<div class="col-xs-3 col-md-1 text-center list-items">
+					<div class="item-actionBtn">
+						<i class="fa fa-list-alt fa-lg mouse-pointer send-btn" onclick=""></i>
+						<i class="fa fa-file-text-o fa-lg send-btn mouse-pointer" onclick=""></i>
+						<i class="fa fa-print fa-lg send-btn mouse-pointer"></i>
+					</div>
+				</div>
+			</div>
+			<!-- 列表內容結束 -->
+		</div>
+
+		<!-- 內容 -->
+		<div class="col-xs-12 col-md-12 tab-border totalTab-tab-content" id="signBack-content">
+			<!-- 列表內容 -->
+			<div class="col-xs-12 col-md-12 list-item-title text-center">
+				<div class="col-xs-5 col-md-2 list-items">
+					文號
+				</div>
+				<div class="col-xs-4 col-md-6 list-items">
+					主旨
+				</div>
+				<div class="col-xs-4 col-md-1 list-items">
+					密等
+				</div>
+				<div class="col-xs-4 col-md-2 list-items">
+					預警
+				</div>
+				<div class="col-xs-3 col-md-1 list-items">
+					&nbsp;
+				</div>
+			</div>
+			<!-- 列表內容 -->
+			<div class="col-xs-12 col-md-12">
+				<div class="col-xs-5 col-md-2 list-items">
+					克林0012346666
+				</div>
+				<div class="col-xs-4 col-md-6 list-items">
+					有關模板工程
+				</div>
+				<div class="col-xs-4 col-md-1 list-items text-center list-item-hide-text">
+					普
+				</div>
+				<div class="col-xs-4 col-md-2 list-items text-center">
+					2016-06-29
+				</div>
+				<div class="col-xs-3 col-md-1 text-center list-items">
+					<div class="item-actionBtn">
+						<i class="fa fa-list-alt fa-lg mouse-pointer send-btn" onclick=""></i>
+						<i class="fa fa-pencil-square-o fa-lg"></i>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 列表內容結束 -->
+		</div>
+<!-- ========================= 本次設計結束 ========================= -->	
+							
+		<!-- 測試用內容 -->
+		<div id="testBs">
+			<div class="contents">
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-3 control-label font-lineHeight">
+					    	合約名稱
+					    </div>
+					    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+					    	<select class="form-control">
+					    		<option>一二工地</option>
+					    	</select>
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-3 control-label font-lineHeight">
+					    	包商/廠商
+					    </div>
+					    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+					    	<select class="form-control">
+					    		<option>一二三廠商</option>
+					    	</select>
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-3 control-label font-lineHeight">
+					    	類別
+					    </div>
+					    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+					    	<select class="form-control">
+					    		<option>衛署</option>
+					    	</select>
+					    </div>
+					</div>
+					
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+						<div class="col-xs-12 col-md-3 control-label font-lineHeight">
+					    	類型
+					    </div>
+					    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+					    	<select class="form-control">
+					    		<option>施工</option>
+					    	</select>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="testBs2">
+			<div class="contents">
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight">
+					    	受文者
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					    	<div class="col-xs-12 col-md-12 control-label font-lineHeight">
+					    		<i class="fa fa-users fa-lg mouse-pointer"></i>
+					    	</div>
+							<div class="col-xs-12 col-md-2 control-label font-lineHeight">
+								正本
+							</div>
+							<div class="col-xs-12 col-md-10 control-label font-lineHeight">
+								一二三公司,五六七營造
+							</div>
+							<div class="col-xs-12 col-md-2 control-label font-lineHeight">
+								副本
+							</div>
+							<div class="col-xs-12 col-md-10 control-label font-lineHeight">
+								七八九協辦單位,ABC市政單位
+							</div>
+					    </div>
+					    
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight">
+					    	速別
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					    	<select class="form-control">
+					    		<option>速件</option>
+					    		<option>最速件</option>
+					    	</select>
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight">
+					    	密等
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					    	<select class="form-control">
+					    		<option>普通</option>
+					    		<option>機密</option>
+					    	</select>
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	附件
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					   		<i class="fa fa-cloud-upload fa-lg mouse-pointer send-btn" onclick="fileSelect();"></i>
+					    </div>
+					</div>
+					<div class="col-xs-12 col-md-12 list-items" id="isSelectFile" style="display:none;">
+						<div class="form-group">
+						    <div class="col-xs-12 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+						    	已選擇檔案
+						    </div>
+						    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+						   		
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	主旨
+					    </div>
+					    <div class="col-xs-12 col-md-10">
+					      <input type="text" class="form-control">
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	說明
+					    </div>
+					    <div class="col-xs-12 col-md-10">
+					      <textarea class="form-control item-textarea-height">ㄧ、項目
+二、項目</textarea>
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	承辦人
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight" id="pointPeople">
+					   		Race
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	預警日期
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					    	<i class="fa fa-calendar mouse-pointer send-btn"></i>
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	創建日期
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					   		2016-06-02
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	關鍵字
+					    </div>
+					    <div class="col-xs-12 col-md-10">
+					      <input type="text" class="form-control">
+					    </div>
+					    <div class="col-xs-12 col-md-12 control-label font-lineHeight">
+					      多個請以"什麼符號"進行分隔
+					    </div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+
+		<div id="testBs5">
+			<div class="contents">
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight">
+					    	文號
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					      業00123456789
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	承辦人
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					   		-
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	預警日期
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					    	-
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight">
+					    	摘要
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					      這是一篇有關於工程的公文
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	創建日期
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					   		2016-06-02
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	創建人
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					   		Race
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	相關檔案
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					    	<div class="col-xs-12 col-md-1 control-label font-lineHeight">
+					    		<i class="fa fa-paperclip fa-lg"></i>
+					   		</div>
+					    	<div class="col-xs-12 col-md-11 control-label font-lineHeight">
+					   		1010404-克林衛署發字第1010404-1號-有關本公司承攬「行政院衛生署衛生大樓新建工程」擬調整工地組織及更換人員乙案，詳如說明，請 查照。.pdf
+					   		</div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	關鍵字
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					      工程,公文,施工
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="testBs6">
+			<div class="contents">
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight">
+					    	文號
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					      業00123456789
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	承辦人
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					   		財務部 邱政中
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	預警日期
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					    	2016-06-30
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight">
+					    	摘要
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					      這是一篇有關於工程的公文
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	創建日期
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					   		2016-06-02
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	創建人
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					   		Race
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	相關檔案
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					    	<div class="col-xs-12 col-md-1 control-label font-lineHeight">
+					    		<i class="fa fa-paperclip fa-lg"></i>
+					   		</div>
+					    	<div class="col-xs-12 col-md-11 control-label font-lineHeight">
+					   		1010404-克林衛署發字第1010404-1號-有關本公司承攬「行政院衛生署衛生大樓新建工程」擬調整工地組織及更換人員乙案，詳如說明，請 查照。.pdf
+					   		</div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-12 list-items">
+					<div class="form-group">
+					    <div class="col-xs-12 col-md-2 control-label font-lineHeight list-item-text-nowrap">
+					    	關鍵字
+					    </div>
+					    <div class="col-xs-12 col-md-10 control-label font-lineHeight">
+					      工程,公文,施工
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 組織架構圖 -->
+		<div id="testBs8">
+			<div class="contents modal-items">
+				<div id="orgChartContainer" style="width: 100%">
+			        <div id="orgChart"></div>
+			    </div>
+			</div>
+		</div>
+		<link rel="stylesheet" href="include/css/jquery.orgchart.css">
+		<script src="include/js/jquery/jquery.orgchart.js"></script>
+
+		<script src="include/js/contentpages/undertake/config.js"></script>
+		<script src="include/js/contentpages/undertake/main.js"></script>
+		<script src="include/js/contentpages/undertake/date.js"></script>
+	</body>
+</html>

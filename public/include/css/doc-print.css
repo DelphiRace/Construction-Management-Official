@@ -1,0 +1,56 @@
+.doc-name{
+	margin-bottom: 10px;
+}
+.doc-target{
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.doc-title{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.doc-content{
+	margin-top: 20px;
+	padding-left: 12mm;
+}
+.doc-sender{
+	margin-top: 20px;
+}
+.content-width{
+	width: 73%;
+}
+.text-spacing{
+	letter-spacing: 2mm;
+}
+
+.content-sender-width{
+	width: 92%;
+}
+
+.company-info{
+	font-size: 10px;
+	line-height: 18px;
+	margin-right: -12px;
+}
+
+.content-lineheight{
+	line-height: 35px;
+}
+
+.page {
+    width: 210mm;
+    min-height: 290mm;
+    /*padding: 20mm;*/
+    margin: auto;
+    /*border: 1px #D3D3D3 solid;*/
+    /*border-radius: 5px;*/
+    background: white;
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+    /*overflow-x: auto;*/
+}
+.content-phone-width{
+	width: 54%;
+}
+.print-break-page{
+	page-break-after: always;
+}

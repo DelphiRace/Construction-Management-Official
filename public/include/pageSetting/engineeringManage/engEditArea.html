@@ -1,0 +1,19 @@
+<div>
+	<label id="new_label">新增</label>
+	<label id="edit_label">修改</label>
+	<span id="target" style="color: red"></span> 項目
+</div>
+<div>
+	<label>工程名稱：<input type="text" id="eng_name" placeholder="請輸入工程名稱" value=""></label>
+	<!--<label>工程代號：<input type="text" id="eng_scode" placeholder="請輸入工程代號" value=""></label>-->
+	<div id="unitSelection" name="unitSelection" style="display: none">
+		<label>單位</label>
+	</div>	
+</div>
+<div>
+	<input type="hidden" id="table_for_insert" value="eng_type_a">
+	<input type="hidden" id="table_for_getTypeId" value="">
+	<input type="button" id="new_submit" value="送出" onclick="sendData('new');">
+	<input type="button" id="edit_submit" value="修改" onclick="sendData('edit');">
+	<input type="button" id="cancel_new_data" value="取消" onclick="cancelNewData();">
+</div>

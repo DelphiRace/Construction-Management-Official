@@ -1,0 +1,125 @@
+<div class="contents">
+	<form id="uploadFiles">
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-12 control-label font-lineHeight">
+			    	事項(限定50字)
+			    </div>
+			    <div class="col-xs-12 col-md-12 control-label font-lineHeight">
+			    	<textarea class="form-control userInput item-textarea-height" maxlength="50" id="Desc"></textarea>
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-3 control-label font-lineHeight">
+			    	<i class="fa fa-square-o fa-lg" id="PricipalItem"></i>
+			    	工作指派
+			    </div>
+			    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+			    	<select class="form-control Pricipal userInput item-hide" id="Pricipal">
+			    	</select>
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-3 control-label font-lineHeight">
+			    	<i class="fa fa-square-o fa-lg" id="DesigneeItem"></i>
+			    	工作回報
+			    </div>
+			    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+			    	<select class="form-control Pricipal userInput item-hide" id="Designee">
+			    	</select>
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-3 col-md-3 control-label font-lineHeight">
+			    	起日
+			    </div>
+			    <div class="col-xs-3 col-md-2 control-label font-lineHeight">
+			    	<i class="fa fa-calendar fa-lg mouse-pointer send-btn" id="StartDateCalendar"></i>
+			    </div>
+			    <div class="col-xs-6 col-md-7 control-label font-lineHeight" id="StartDate_content">
+			    	
+			    </div>
+			    <div class="col-xs-12 col-md-12 control-label font-lineHeight">
+			    	<div class="userInput" id="StartDate"></div>
+			    </div>
+			</div>
+			
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-3 col-md-3 control-label font-lineHeight">
+			    	迄日
+			    </div>
+			    <div class="col-xs-3 col-md-2 control-label font-lineHeight">
+			    	<i class="fa fa-calendar fa-lg mouse-pointer send-btn" id="EndDateCalendar"></i>
+			    </div>
+			    <div class="col-xs-6 col-md-7 control-label font-lineHeight" id="EndDate_content">
+			    </div>
+			    <div class="col-xs-12 col-md-12 control-label font-lineHeight">
+			    	<div class="userInput" id="EndDate"></div>
+			    </div>
+			</div>
+			
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-3 col-md-3 control-label font-lineHeight">
+			    	地點
+			    </div>
+			    <div class="col-xs-9 col-md-9 control-label font-lineHeight">
+			    	<input type="text" class="form-control userInput" id="Location">
+			    </div>
+			</div>
+			
+		</div>
+		<div class="col-xs-12 col-md-12 list-items" id="detailArea">
+			<div class="form-group">
+				<div class="col-xs-3 col-md-3 control-label font-lineHeight">
+			    	細項
+			    </div>
+			    <div class="col-xs-9 col-md-9 control-label font-lineHeight">
+			    	<i class="fa fa-plus fa-lg send-btn mouse-pointer" id="addDetail"></i>
+			    </div>
+			    <div class="col-xs-12 col-md-12 control-label font-lineHeight">
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items" id="historiesArea">
+			<div class="form-group">
+				<div class="col-xs-3 col-md-3 control-label font-lineHeight">
+			    	辦況
+			    </div>
+			    <div class="col-xs-9 col-md-9 control-label font-lineHeight">
+		    		<i class="fa fa-plus fa-lg send-btn mouse-pointer" id="addHistories"></i>
+			    </div>
+			    <div class="col-xs-12 col-md-12 control-label font-lineHeight">
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items">
+			<div class="form-group">
+			    <div class="col-xs-3 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+			    	附件上傳
+			    </div>
+			    <div class="col-xs-9 col-md-9 control-label font-lineHeight">
+			   		<i class="fa fa-cloud-upload fa-lg mouse-pointer send-btn" id="itemFiles"></i>
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 list-items" id="isSelectFile" style="display:none;">
+			<div class="form-group">
+			    <div class="col-xs-12 col-md-3 control-label font-lineHeight list-item-text-nowrap">
+			    	已選擇檔案
+			    </div>
+			    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+			    </div>
+			</div>
+		</div>
+	</form>
+</div>

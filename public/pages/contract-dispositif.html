@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Bootstrap CSS -->
+		<!--
+		<link href="../include/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../include/css/jquery-ui.min.css" rel="stylesheet">
+		<script src="../include/js/jquery/jquery.min.js"></script>
+		<script src="../include/js/jquery/jquery-ui.min.js"></script>
+		-->
+		<script src="include/js/contentpages/dipositif/dipositif.js"></script>
+	</head>
+	<body>
+		<article class="box post">
+			<h2>契約主文</h2>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="工程名稱" aria-describedby="basic-addon2" id="eng_name">
+			</div>
+			<div class="well-sm">
+				 <input type="text" class="form-control userInput" placeholder="業主(甲方)" aria-describedby="basic-addon2" id="owner">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="廠商(乙方)" aria-describedby="basic-addon2" id="company">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="業主代表人" aria-describedby="basic-addon2" id="owner_pic">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="廠商代表人" aria-describedby="basic-addon2" id="company_pic">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="設計單位" aria-describedby="basic-addon2" id="du">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="監造單位" aria-describedby="basic-addon2" id="su">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="專案管理單位" aria-describedby="basic-addon2" id="pmu">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="契約編號" aria-describedby="basic-addon2" id="prj_no">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="工程地點" aria-describedby="basic-addon2" id="eng_place">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput inputNumberOnly" placeholder="契約總價" aria-describedby="basic-addon2" id="prj_tp">
+			</div>
+			<div class="well-sm">
+				<div class="input-group">
+					<input type="text" class="form-control userInput date" placeholder="開工日期" aria-describedby="basic-addon2" id="sdate">
+					<span class="input-group-addon">
+						
+						<input id="work-month" type="radio" checked="checked">
+						<label for="work-month">日曆天</label>
+					</span>
+					<span class="input-group-addon">
+						<input id="work-workday" type="radio">
+						<label for="work-workday">工作天</label>
+					</span>
+				</div>
+			</div>
+			<div class="well-sm">
+				<input type="number" class="form-control userInput inputNumberOnly" placeholder="工期" aria-describedby="basic-addon2" id="duration">
+				
+			</div>
+			<div class="well-sm">
+				<input type="number" class="form-control userInput inputNumberOnly" placeholder="估驗計價(以日為單位)" aria-describedby="basic-addon2" id="tv">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="進度落後(%)" aria-describedby="basic-addon2" id="bs">
+			</div>
+			<div class="well-sm">
+				<input type="number" class="form-control userInput inputNumberOnly" placeholder="懲罰性違約金" aria-describedby="basic-addon2" id="pd">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="逾期罰款每日金額(‰,千分比)" aria-describedby="basic-addon2" id="penalty">
+			</div>
+			<div class="well-sm">
+				<input type="number" class="form-control userInput inputNumberOnly" placeholder="預付款" aria-describedby="basic-addon2" id="ap">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="保留款比例(%)" aria-describedby="basic-addon2" id="rmp">
+			</div>
+			<div class="well-sm">
+				<input type="text" class="form-control userInput" placeholder="保固金比例(%)" aria-describedby="basic-addon2" id="dp">
+			</div>
+			<div class="well-lg">
+				
+					<button type="button" class="btn btn-success col-xs-6 col-md-6" onclick="getInput();">儲存</button>
+					<button type="button" class="btn btn-default col-xs-6 col-md-6 btn-color-bk">取消</button>
+				
+			</div>
+		</article>
+	</body>
+</html>

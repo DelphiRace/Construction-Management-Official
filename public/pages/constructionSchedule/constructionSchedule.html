@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script type="text/javascript">
+		loadJS("include/js/contentpages/constructionSchedule/constructionSchedule.js");
+	    //第二種，自己抓取ＤＡＴＡ處理後交由ＡＰＩ繪製
+	    var dataSample = getChartsData();
+	    //console.log(dataSample);
+	    var LineOptions = {
+	      drawItemID: 'lineCharts',
+	      unitTitle: dataSample.ChartHead.ChartAxisUnit.AxisY,
+	      //bottomTitle: dataSample.ChartHead.ChartAxisUnit.AxisX,
+	      chartsHelp: "right", //top,left,right,bottom; 預設為bottom
+	      drawType:"LineChart", //drawType 可使用 ColumnChart、LineChart、TimeLine
+	      annotation: true //default是false
+	    };
+	    var setTitleArr = ["Data",dataSample.ChartLine.PlanLine,dataSample.ChartLine.RealLine];
+	    var LineDataArr = processData(setTitleArr,dataSample.ChartContent);
+	   
+	    //結束第二種
+
+	    //甘特圖
+	    var dataSample = getGanttChartsData();
+	    var setTitleArr = ["Name","sDate","eDate"];
+	    var timeBarDataArr = processGanttData(setTitleArr,dataSample.ChartContent);
+	    var timeBarOptions = {
+	      drawItemID: 'ganttCharts',
+	      drawType:"TimeLine", 
+	      ganttColor: timeBarDataArr.colors
+	    };
+	    
+	    //結束甘特圖
+		</script>
+
+	</head>
+	<body>
+		<div id="lineCharts" style=""></div>
+		<div id="ganttCharts" style=""></div>
+		<script type="text/javascript">
+		$(function(){
+			setTimeout(function(){
+				createChart(LineOptions,LineDataArr);
+				createChart(timeBarOptions,timeBarDataArr.reData);
+			},1);
+			
+		});
+			
+			
+		</script>	
+	</body>
+</html>

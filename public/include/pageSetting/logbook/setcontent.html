@@ -1,0 +1,140 @@
+<div align="center"><b><span>建築物施工日誌</span></b></div>
+<a href='javascript:tolist()'>返回日誌清單</a><br>
+    <div id='div_hid' style="display:@@div_inphid@@;" >
+        <input type='button'  onclick='savecontent()' value="暫存">(暫時儲存)
+        <input type='button'  onclick='savecontentcheck()' value="確認">(確認後不可再修改)
+    </div>
+    <!-- <a href='javascript:savecontent();'>送出<> -->
+    <div align='center'>
+    <form id='cform'  method="post">
+        <div align='center'>
+            <input type='hidden' id='isnew' value=@@isnew@@>
+            <input type='hidden' name='week' value=@@week@@>
+            <input type='hidden' name='type' value='diary_info'>
+           <div>
+                <div align='left'>
+                    @@no@@
+                    <br>
+                    <b>今日日期：</b>@@today@@ 
+                    <br>
+                    <b>本日天氣：</b></div>
+                    <span>
+                       <b> 上午：</b><select id='amw' class='1u 12u(mobile)' style='display:inline;' name='amwather' class='cls_input' @@disabled@@>
+                                <option value=0>請選擇</option>@@amoption@@
+                            </select >
+                    </span> &nbsp;&nbsp;
+                    <span>
+                        <b>下午：</b><select id='pmw' class='1u 12u(mobile)' style='display:inline;'  name='pmwather' class='cls_input' @@disabled@@>
+                                <option value=0>請選擇</option>@@pmoption@@
+                            </select>
+                    </span>
+        </div>
+        <br>
+        <br>
+
+    </form>
+    </div>
+    <table class='border' align='center'  rules="all" cellpadding='10';>
+        <tr >
+            <td COLSPAN=2><b>工程名稱</b></td>
+            <td COLSPAN=2>@@prjname@@</td>
+            <td COLSPAN=2><b>承攬廠商名稱</b></td>
+            <td COLSPAN=2>@@supplyname@@</td>
+        </tr>
+        <tr>
+            <td><b>契約工期</b></td>
+            <td>@@pday@@天</td>
+            <td><b>累計工期</b></td>
+            <td>@@aday@@</td>
+            <td><b>剩餘工期</b></td>
+            <td>@@sday@@</td>
+            <td><b>工期展延天數</b></td>
+            <td>@@cday@@</td>
+        </tr>
+        
+        <tr >
+            <td COLSPAN=2><b>開工日期</b></td>
+            <td COLSPAN=2>@@start@@</td>
+            <td COLSPAN=2><b>完工日期</b></td>
+            <td COLSPAN=2>@@end@@</td>
+        </tr>
+            <tr >
+            <td COLSPAN=2><b>預期進度（％）</b></td>
+            <td COLSPAN=2>@@tbp@@</td>
+            <td COLSPAN=2><b>實際進度（％）</b></td>
+            <td COLSPAN=2>@@twp@@</td>
+        </tr>
+        <tr>
+            <td COLSPAN=8>
+               <b> 一、依施工計畫書執行按圖施工概況（含約定之重要施工項目即完成數量等）：</b>
+            </td>
+        </tr>
+        <tr>
+            <td COLSPAN=2><b>施工項目</b></td>
+            <td><b>單位</b></td>
+            <td><b>契約數量</b></td>
+            <td><b>本日完成數量</b></td>
+            <td><b>累計完成數量</b></td>
+            <td COLSPAN=2><b>備註</b></td>
+        </tr>
+        <tr id='tr1'>
+            @@tr1@@
+        </tr>
+        <tr>
+            <td COLSPAN=8>
+                <b>二、工地材料管理概況（含約定之重要材料）：</b>
+            </td>
+        </tr>
+        <tr>
+            <td COLSPAN=2><b>材料名稱</b></td>
+            <td><b>單位</b></td>
+            <td><b>設計數量</b></td>
+            <td><b>本日進場數量</b></td>
+            <td><b>累計進場數量</b></td>
+            <td COLSPAN=2><b>備註</b></td>
+        </tr>
+        <tr id='tr2'>
+            @@tr2@@
+        </tr>
+        <tr>
+        <td COLSPAN=8>
+                <b>三、工地人員及機具管理（含約定之人數及機具使用情形及數量）：</b>
+            </td>
+        </tr>
+        <tr>
+            <td COLSPAN=2><b>工別</b></td>
+            <td><b>本日人數</b></td>
+            <td><b>累計人數</b></td>
+            <td COLSPAN=2><b>機具名稱</b></td>
+            <td><b>本日進場數量</b></td>
+            <td><b>累計進場數量</b></td>
+        </tr>
+        <tr id='tr3'>
+            @@tr3@@
+        </tr>
+        <tr>
+            <td COLSPAN=8>
+                <b>四、工地勞工安全事項之督導、公共環境與安全之維護及其他工地行政事務：</b><br>
+                @@fourth@@
+            <td>
+        <tr>
+        <tr>
+            <td COLSPAN=8>
+                <b>五、施工取樣試驗紀錄：</b><br>
+                @@fifth@@
+            <td>
+        <tr>
+        <tr>
+            <td COLSPAN=8>
+                <b>六、通知協力廠商辦理事項：</b><br>
+                @@sixth@@
+            <td>
+        <tr>
+        <tr>
+            <td COLSPAN=8>
+                <b>七、重要事項紀錄：</b><br>
+                @@seventh@@
+            <td>
+        <tr>
+    </table>
+    <br>

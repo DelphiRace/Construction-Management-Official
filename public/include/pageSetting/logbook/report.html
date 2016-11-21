@@ -1,0 +1,110 @@
+ <div align="center"><b><span>建築物施工日誌</span></b></div>   
+    <a href='javascript:tolist()'>返回日誌清單</a>
+    <div align='center'>
+    <div>表單編號：@@no@@</div>
+    <div>本日天氣：<span>上午：@@amweather@@</span> &nbsp;&nbsp;<span>下午：@@pmweather@@</span> &nbsp;&nbsp;&nbsp;填表日期：@@indate@@&nbsp;&nbsp;&nbsp;<span>星期@@week@@</span></div>
+    </div>
+    <table class='border' align='center'  rules="all" cellpadding='10';>
+        <tr >
+            <td COLSPAN=2>工程名稱</td>
+            <td COLSPAN=2>@@prjname@@</td>
+            <td COLSPAN=2>承攬廠商名稱</td>
+            <td COLSPAN=2>@@supplyname@@</td>
+        </tr>
+        <tr>
+            <td>契約工期</td>
+            <td>@@pday@@天</td>
+            <td>累計工期</td>
+            <td>@@aday@@</td>
+            <td>剩餘工期</td>
+            <td>@@sday@@</td>
+            <td>工期展延天數</td>
+            <td>@@cday@@</td>
+        </tr>
+        
+        <tr >
+            <td COLSPAN=2>開工日期</td>
+            <td COLSPAN=2>@@start@@</td>
+            <td COLSPAN=2>完工日期</td>
+            <td COLSPAN=2>@@end@@</td>
+        </tr>
+            <tr >
+            <td COLSPAN=2>預期進度（％）</td>
+            <td COLSPAN=2>@@tbp@@</td>
+            <td COLSPAN=2>實際進度（％）</td>
+            <td COLSPAN=2>@@twp@@</td>
+        </tr>
+        <tr>
+            <td COLSPAN=8>
+                一、依施工計畫書執行按圖施工概況（含約定之重要施工項目即完成數量等）：
+            </td>
+        </tr>
+        <tr>
+            <td COLSPAN=2>施工項目</td>
+            <td>單位</td>
+            <td>契約數量</td>
+            <td>本日完成數量</td>
+            <td>累計完成數量</td>
+            <td COLSPAN=2>備註</td>
+        </tr>
+        <tr id='tr1'>
+            @@tr1@@
+        </tr>
+        <tr>
+            <td COLSPAN=8>
+                二、工地材料管理概況（含約定之重要材料）：
+            </td>
+        </tr>
+        <tr>
+            <td COLSPAN=2>材料名稱</td>
+            <td>單位</td>
+            <td>設計數量</td>
+            <td>本日進場數量</td>
+            <td>累計進場數量</td>
+            <td COLSPAN=2>備註</td>
+        </tr>
+        <tr id='tr2'>
+            @@tr2@@
+        </tr>
+        <tr>
+        <td COLSPAN=8>
+                三、工地人員及機具管理（含約定之人數及機具使用情形及數量）：
+            </td>
+        </tr>
+        <tr>
+            <td COLSPAN=2>工別</td>
+            <td>本日人數</td>
+            <td>累計人數</td>
+            <td COLSPAN=2>機具名稱</td>
+            <td>本日進場數量</td>
+            <td>累計進場數量</td>
+        </tr>
+        <tr id='tr3'>
+            @@tr3@@
+        </tr>
+        <tr>
+            <td COLSPAN=8>
+                四、工地勞工安全事項之督導、公共環境與安全之維護及其他工地行政事務：<br>
+                @@fourth@@
+            <td>
+        <tr>
+        <tr>
+            <td COLSPAN=8>
+                五、施工取樣試驗紀錄：<br>
+                @@fifth@@
+            <td>
+        <tr>
+        <tr>
+            <td COLSPAN=8>
+                六、通知協力廠商辦理事項：<br>
+                @@sixth@@
+            <td>
+        <tr>
+        <tr>
+            <td COLSPAN=8>
+                七、重要事項紀錄：<br>
+                @@seventh@@
+            <td>
+        <tr>
+    </table>
+    <br>

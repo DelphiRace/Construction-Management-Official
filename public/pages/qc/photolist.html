@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		
+	    <script src="include/js/jquery/jquery.PrintArea.js"></script>
+	    <script src="include/js/waypoints/jquery.waypoints.min.js"></script>
+		<style type="text/css">
+			.phtr{
+				border:1px #cccccc solid ;
+				vertical-align:middle;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="page-wrapper">
+			
+
+			<!-- Post -->
+			<article class="box post">
+				<div class="item-center">
+				    <input onclick="viewprint();" type="button" value="預覽列印">
+				    <input onclick="save();" type="button" value="下載PDF">
+				</div>
+				
+				<div id='photomain' align='center' style='margin: 0px auto;'>
+					<h3 id="title" class="f-lg"></h3>
+					<div>
+						<select id="d_select"></select>
+		          		<div class="tb">材料進場查驗照片</div>
+						
+		          	</div>
+		          	<!--
+		          	<div class="col-xs-12 col-md-12 height100pre">
+		          		<div class="col-xs-2 col-md-2 tb tb-title f-right">主辦機關：</div>
+		          		<div class="col-xs-7 col-md-7 tb f-left">1</div>
+		          	</div>
+
+		          	<div class="col-xs-12 col-md-12 height100pre">
+		          		<div class="col-xs-2 col-md-2 tb tb-title f-right">專案管理單位：</div>
+		          		<div class="col-xs-7 col-md-7 tb f-left">1</div>
+		          	</div>
+
+		          	<div class="col-xs-12 col-md-12 height100pre">
+		          		<div class="col-xs-2 col-md-2 tb tb-title f-right">監造廠商：</div>
+		          		<div class="col-xs-7 col-md-7 tb f-left">1</div>
+		          	</div>
+
+		          	<div class="col-xs-12 col-md-12 height100pre">
+		          		<div class="col-xs-2 col-md-2 tb tb-title f-right">承包廠商：</div>
+		          		<div class="col-xs-7 col-md-7 tb f-left">1</div>
+		          	</div>
+		          	-->
+
+
+	          	<!------------分隔線---------->
+			        
+					<div class="col-xs-3 col-md-3">
+						<div class="panel panel-default f-center">
+							<div class="panel-heading">
+								<h3 class="panel-title">主辦機關</h3>
+							</div>
+							<div class="panel-body">
+								
+							</div>
+						</div>
+					</div>
+					
+					<!------------分隔線---------->
+					
+					<div class="col-xs-3 col-md-3">
+						<div class="panel panel-default f-center">
+							<div class="panel-heading">
+								<h3 class="panel-title">專案管理單位</h3>
+							</div>
+							<div class="panel-body">
+								
+							</div>
+						</div>
+					</div>
+					
+					<!------------分隔線---------->
+					
+					<div class="col-xs-3 col-md-3">
+						<div class="panel panel-default f-center">
+							<div class="panel-heading">
+								<h3 class="panel-title">監造廠商</h3>
+							</div>
+							<div class="panel-body">
+								
+							</div>
+						</div>
+					</div>
+				
+					<!------------分隔線---------->
+					
+					<div class="col-xs-3 col-md-3">
+						<div class="panel panel-default f-center">
+							<div class="panel-heading">
+								<h3 class="panel-title">承包廠商</h3>
+							</div>
+							<div class="panel-body">
+								
+							</div>
+						</div>
+					</div>
+					
+					<!------------分隔線---------->
+				  
+			    	<div id="photolist" class="infinite-container">
+			    	</div>
+				    <div id="imgLoader" style="display:none;">
+				    	<img class="content-loading-img-in" src="include/images/loader.svg">
+				    </div>
+				    <div id="thisBottom"></div>
+				</div>
+				<!--列印-->
+				<div id="printMain">
+					
+				</div>		
+			</article>	
+		</div>
+
+		<script src="include/js/contentpages/qc/photolist.js"></script>
+	</body>
+</html>

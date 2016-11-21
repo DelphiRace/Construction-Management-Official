@@ -1,0 +1,166 @@
+
+div.orgChart {
+  margin : 10px;
+  padding : 20px;
+}
+
+div.orgChart .rootNode{
+  width: 100% !important;
+}
+
+div.orgChart h2 {
+  margin : 0px;
+  font-size : 16px !important;
+  font-weight: normal;
+  min-height: 20px;
+  width: 135px;
+}
+
+div.orgChart h2.edit:hover {
+  background: #fcfaca;
+  cursor: text;
+}
+
+div.orgChart ul {
+  list-style : none;
+  margin : 4px;
+  padding : 0px;
+  font-size : 0.8em;
+  text-align : left;
+}
+
+div.nodeSelectModal:hover{
+  background: #fcfaca !important;
+  cursor: pointer !important;
+}
+
+div.nodeSelectModal:active{
+  background: #FFFC92 !important;
+}
+
+div.nodeSelectActive{
+  background: #FFFC92 !important;
+}
+
+div.nodeSelectActive:hover {
+  background: #FFFC92 !important;
+}
+
+div.orgChart ul.stack,
+div.orgChart ul.stack ul { text-align : center; }
+
+div.orgChart table { width : 100%; }
+
+div.orgChart tr.lines td.line {
+  width : 1px;
+  height : 20px;
+}
+
+/*div.orgChart tr.lines td.top { border-top : 1px dashed black; }*/
+div.orgChart tr.lines td.top { border-top : 1px solid black; }
+
+/*div.orgChart tr.lines td.left { border-right : 1px dashed black; }*/
+div.orgChart tr.lines td.left { border-right : 1px solid black; }
+
+/*div.orgChart tr.lines td.right { border-left : 0px dashed black; }*/
+div.orgChart tr.lines td.right { border-left : 0px solid black; }
+
+div.orgChart tr.lines td.half { width : 50%; }
+
+div.orgChart td {
+  text-align : center;
+  vertical-align : top;
+  /*padding : 0px 2em;*/
+  /*padding : 0px;*/
+}
+
+div.orgChart div.node {
+  cursor : default;
+  border : 1px solid #e7e7e7;
+  display : inline-block;
+  padding : 5px;
+  width : 166px;
+  height : 80px;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #fbfbfb)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #fbfbfb 100%); /* W3C */
+  line-height : 1.3em;
+  border-radius : 4px;
+  -moz-border-radius : 4px;
+  -webkit-border-radius : 4px;
+  position: relative;
+  box-shadow: 1px 1px 0px #ddd;
+  margin-left: 3px;
+  margin-right: 2px;
+}
+
+.org-add-button,
+.org-del-button,
+.org-other-button,
+.org-confirm-del-button {
+  position: absolute;
+  font-size: 12px;
+}
+
+.org-add-button {
+  bottom: 3px;
+  /*left: 5px;*/
+  padding-left: 5px;
+  padding-right: 5px;
+  /*background: url(./add.png) no-repeat 0 3px;*/
+}
+
+.org-other-button {
+  bottom: 3px;
+  /*left: 5px;*/
+  padding-left: 5px;
+  padding-right: 5px;
+  right: 5px;
+  /*background: url(./add.png) no-repeat 0 3px;*/
+}
+
+
+.org-add-button:hover,
+.org-other-button:hover,
+.org-del-button:hover {
+  background-color: #eef;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.org-add-button:hover i{
+  color: #079300;
+}
+
+.org-other-button:hover i{
+  color: #079300;
+}
+
+.org-del-button:hover i{
+  color: #A90000;
+}
+
+.org-add-button i,
+.org-del-button i,
+.org-other-button i{
+  margin-right: 2px
+}
+
+.org-del-button {
+  /*background: url(./delete.png) no-repeat;*/
+  width: 20px;
+  height: 24px;
+  bottom: 3px;
+  right: 5px;
+  top: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.org-input { width: 90px; }
+
+.org-confirm-del-button { display: none; }

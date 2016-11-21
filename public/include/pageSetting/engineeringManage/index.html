@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>工程管理</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="../include/strongly/assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../include/strongly/assets/css/main.css" />
+        <link rel="stylesheet" href="../include/css/jquery-ui.min.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="../include/strongly/assets/css/ie8.css" /><![endif]-->
+		<!-- Scripts -->
+		<script src="../include/strongly/assets/js/jquery.min.js"></script>
+        <script src="../include/js/jquery/jquery-ui.min.js"></script>
+		<script src="../include/strongly/assets/js/jquery.dropotron.min.js"></script>
+		<script src="../include/strongly/assets/js/skel.min.js"></script>
+		<script src="../include/strongly/assets/js/skel-viewport.min.js"></script>
+		<script src="../include/strongly/assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="../include/strongly/assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="../include/js/config/config.js"></script>
+		<script src="../include/js/lang/langSet.js"></script>
+        <script src="../include/js/page/ctrl.js"></script>
+        <script src="../include/js/page/check_login.js"></script>
+        <script src="../include/js/page/topMenu.js"></script>
+		<script src="../include/strongly/assets/js/main.js"></script>
+		
+		<script src="../include/js/page/EngineeringManage/engineeringManage.js"></script>
+		<script src="../include/js/page/EngineeringManage/engineering.js"></script>
+		<script src="../include/js/page/EngineeringManage/space.js"></script>
+
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+			<!-- Header -->
+			<div id="header-wrapper">
+				<div id="header" class="container">
+					<!-- Logo -->
+					<h1 id="logo"><a href="./">建築物施工管理雲端系統</a></h1>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<div style="float:right;">
+							<span>Hi, @@userName@@ 歡迎回來</span>
+						</div>
+						<!--選單-->
+						<ul id="menus">
+							<li><a class="icon fa-home" href="./"><span>首頁</span></a></li>
+							<li><a class="icon fa-retweet" href="#" onclick="logoutEven();"><span>Logout</span></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<!-- Main -->
+			<div id="main-wrapper">
+				<div id="main" class="container">
+					<div class="row">
+						<!-- Content -->
+						<div id="content" class="12u 12u(mobile)">
+							<!-- Post -->
+							<article class="box post">
+								<div id="index_content">
+									<input type="button" id="eng_button" value="工程資料" />
+									<input type="button" id="space_button" value="空間資料" />
+								</div>
+								<div id="engineering">
+									<a href="#" id="a1" name="bakc_to_index" onclick="back();">回去</a>
+									<div id="eng_index_area">
+										@@eng_index_area@@
+									</div>
+										
+									<div id="eng_edit_area" style="display: none">
+										@@eng_edit_area@@
+									</div>
+								</div>
+
+								<div id="space">
+									<a href="#" id="a2" name="bakc_to_index" onclick="back();">回去</a>
+									<div id="space_index_area">
+										@@space_index_area@@
+									</div>
+
+									<div id="space_edit_area">
+										@@space_edit_area@@
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<div id="footer-wrapper">
+				<div id="footer" class="container">
+				</div>
+				<div id="copyright" class="container">
+					<ul class="links">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: HTML5 1UP  </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link class="keep" rel="stylesheet" href="../../include/css/font-awesome.min.css">
+        <link class="keep" rel="stylesheet" href="../../include/css/jquery-ui.min.css" />
+        <link class="keep" rel="stylesheet" href="../../include/css/ctrl-style.css" />
+        <link class="keep" rel="stylesheet" href="../../include/css/bootstrap.min.css" />
+
+		<script src="../../include/js/jquery/jquery.min.js"></script>
+		<script src="../../include/js/jquery/jquery-ui.min.js"></script>
+		<script src="https://www.google.com/jsapi"></script>
+		<script src="../../include/js/config/config.js"></script>
+		<script src="../../include/js/chart/chart.js"></script>
+		<script src="../../include/js/page/sar.js"></script>
+		<style type="text/css">
+			.css_table {
+				/*display:table;*/
+			}
+			
+			.css_tr {
+				display: table-row;
+			}
+			
+			.css_td {
+				display: table-cell;
+			}
+		</style>
+		<script>
+            $(function(){
+
+              	//設定今天日期
+              	var dateObj = new Date();
+				var $year = dateObj.getFullYear();
+				var $month = (dateObj.getMonth()+1 < 10)?"0"+(dateObj.getMonth()+1) : (dateObj.getMonth()+1);
+				var $date = (dateObj.getDate() < 10)? "0"+dateObj.getDate() : dateObj.getDate();
+
+				$("#report_date")
+				
+				.val($year+"/"+$month+"/"+$date)
+				.datepicker({
+					dateFormat: 'yy/mm/dd',
+					onSelect:function(){
+						reloadChart();
+					}
+				});
+				//產生圖表
+				var options = {
+				  url: configObject.SARReport,
+				  urlMethod: "POST",
+				  sendData: { date: $("#report_date").val().replace(/\//g,"-") },
+				  drawItemID: 'SARChart',
+				  unitTitle:"人次",
+				  bottomTitle:"工種",
+				  drawType:"ColumnChart", //drawType 可使用 ColumnChart、LineChart 兩種
+				  resultIndex: "data",
+				  annotation: true
+				};
+				createChart(options);
+					
+				//顯示今日出工總人數		
+				setTotalPeople();
+            });
+        </script>
+	</head>
+	<body>
+
+		<div  class='contents'>
+			<div class="col-xs-12 col-md-12 list-items">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-2 control-label font-lineHeight f-right">
+				    	<i class="fa fa-calendar fa-lg"></i>
+				    </div>
+				    <div class="col-xs-12 col-md-10">
+						<input type="text" id="report_date" class="form-control" name="report_date" value="">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-12 control-label font-lineHeight text-center" id="has_people">
+				    	今日出工總人數：<h3 id="totalPeople" name="totalPeople" class="item-inline"></h3>人
+				    </div>
+				    <div class="col-xs-12 col-md-12 control-label font-lineHeight text-center" id="no_people">
+				    	今日無人出工
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items" id="SARChart" style="height:300px;">
+			</div>
+		</div>
+	</body>
+</html>

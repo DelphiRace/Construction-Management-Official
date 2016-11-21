@@ -1,0 +1,260 @@
+<div class="contents">
+	<!-- 頁籤 -->
+	<ul class="nav nav-tabs">
+		<li role="presentation" class="active">
+			<a href="#" id="userInfo">基本資料</a>
+		</li>
+		<li role="presentation">
+			<a href="#" id="accountInfo">帳號設定</a>
+		</li>
+		<li role="presentation">
+			<a href="#" id="census">戶籍地址</a>
+		</li>
+		<li role="presentation">
+			<a href="#" id="communication">通訊地址</a>
+		</li>
+	</ul>
+	<!-- 內容 -->
+	<div class="col-xs-12 col-md-12 item-margin-top">
+		<!-- 使用者基本資料 -->
+		<div class="insertDialog-tab-content" id="userInfo-content">
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">姓名</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="name">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">身分證字號</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="sid">
+				    </div>
+				    <div class="col-xs-12 col-md-12 control-label font-lineHeight">※身分證字號將註冊為帳號且無法修改帳號，請確認無誤後再新增</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">信箱</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="mail">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">生日</div>
+				    <div class="col-xs-12 col-md-2">
+				    	<i class="fa fa-calendar fa-lg mouse-pointer send-btn" id="birthdayBtn"></i>
+				    </div>
+				    <div class="col-xs-12 col-md-7" id="birthday_content">
+				    </div>
+				    <div class="col-xs-12 col-md-12 control-label font-lineHeight item-hide" id="birthday_window">
+				    </div>
+				    <input type="hidden" class="userInput" id="birthday">
+				</div>
+			</div>
+			<!-- radio -->
+			<div class="col-xs-12 col-md-12 list-items radio">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">性別</div>
+				    <div class="col-xs-12 col-md-4">
+				    	<div class="btn-group" data-toggle="buttons" id="sexBtn">
+			  				<label class="btn btn-default">
+			  					<input type="radio" class="userInput"  name="sex" value="1">
+			  					<span class="label-description">男</span>
+			  				</label>
+			  				<label class="btn btn-default">
+			  					<input type="radio" class="userInput" name="sex" value="0">
+			  					<span class="label-description">女</span>
+			  				</label>
+		  				</div>
+				    </div>
+				    <div class="col-xs-12 col-md-5" id="sexContent">
+				    	
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!-- 使用者基本資料-結束 -->
+
+		<!-- 使用者帳號設置 -->
+		<div class="insertDialog-tab-content" id="accountInfo-content">
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">帳號</div>
+				    <div class="col-xs-12 col-md-9 control-label font-lineHeight" id="accountContent">
+				    </div>
+				    <div class="col-xs-12 col-md-12 control-label font-lineHeight">若為新帳號，密碼與帳號相同</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">部門設置</div>
+				    <div class="col-xs-12 col-md-9 control-label font-lineHeight">
+				      <i class="fa fa-sitemap fa-lg mouse-pointer send-btn"></i>
+				    </div>
+				    <div class="col-xs-12 col-md-12" id="orgInfo">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-12 control-label font-lineHeight">職務設置</div>
+				    <div class="col-xs-12 col-md-12" id="orgJobInfo">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items item-hide" id="postitonArea">
+				<div class="form-group">
+					<div class="col-xs-12 col-md-12 control-label font-lineHeight">權限設置</div>
+				    <!-- <div class="col-xs-12 col-md-1 control-label font-lineHeight">
+				    	<i class="fa fa-square-o fa-lg" id="referencePositionBtn"></i>
+				    </div>
+				    <div class="col-xs-12 col-md-11 control-label font-lineHeight">
+				    	分文權限
+				    </div> -->
+				    <div class="col-xs-12 col-md-12" id="postitonList">
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!-- 使用者帳號設置-結束 -->
+
+		<!-- 地址相關 - 戶籍地址 -->
+		<div class="insertDialog-tab-content item-display-n" id="census-content">
+			<input type="hidden" class="userInput" id="uid">
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="col-xs-2 col-md-1 list-items input f-right">
+					<i class="fa fa-square-o" id="census-same"></i>
+				</div>
+				<div class="col-xs-10 col-md-11 list-items input">
+					通訊地址亦同
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">郵遞區號</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="zip" maxlength="5">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">縣市</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="city" maxlength="5">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">鄉鎮區市</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="area" maxlength="5">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">村里</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="vil" maxlength="5">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">鄰</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="verge" maxlength="3">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">路</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="road" maxlength="20">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">巷弄號</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="addr" maxlength="50">
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!-- 地址相關 - 戶籍地址 結束 -->
+
+		<!-- 地址相關 - 通訊地址 -->
+		<div class="insertDialog-tab-content item-display-n" id="communication-content">
+			<input type="hidden" class="userInput" id="uid">
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">郵遞區號</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="zip" maxlength="5">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">縣市</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="city"  maxlength="5">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">鄉鎮區市</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="area"  maxlength="5">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">村里</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="vil"  maxlength="5">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">鄰</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="verge"  maxlength="3">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">路</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="road" maxlength="20">
+				    </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-12 list-items input">
+				<div class="form-group">
+				    <div class="col-xs-12 col-md-3 control-label font-lineHeight">巷弄號</div>
+				    <div class="col-xs-12 col-md-9">
+				      <input type="text" class="form-control userInput" id="addr" maxlength="50">
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!-- 地址相關 - 通訊地址 結束 -->
+
+	</div>
+
+</div>

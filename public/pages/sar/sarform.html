@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="include/js/bootstrap/bootstrap-switch.min.js"></script>
+		<link href="include/css/bootstrap-switch.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<!-- Post -->
+		<article class="box post">
+			<!--選單Tabs-->
+			<ul id="optionTabs" class="nav nav-tabs">
+				<li id="userWork" role="presentation" class="active">
+					<a href="#">人員出工（勤）</a>
+				</li>
+				<li id="tmpCard" role="presentation">
+					<a href="#">訪客與臨時卡管理</a>
+				</li>
+			</ul>
+			<!--人員出工（勤）-->
+			<div id="userWork-area" class="item-center item-margin-top tab-area">
+				<div class="col-xs-12 col-md-12 form-horizontal text-center">
+				  <div class="form-group">
+				    <div class="col-xs-12 col-md-2">
+				    	<input type="checkbox" name="switch" checked>
+						<input type="hidden" id="switch_type" value="1">
+				    </div>
+				    <div class="col-xs-12 col-md-8">
+				    	<div class="input-group">
+					 		<span class="input-group-addon" id="basic-addon1">身分證字號</span>
+					  		<input type="text" class="form-control" placeholder="身分證字號" aria-describedby="basic-addon1" id="ID" name="ID" onkeypress="runScript(event)">
+						</div>
+				    </div>
+				    <div class="col-xs-12 col-md-2">
+			    		<button type="button" class="btn btn-success"  id="ID_check" onclick="submitCheck()">確認</button>
+			    	</div>
+				  </div>
+				</div>
+				<hr id="userInfoLine" class="col-xs-12 col-md-12">	
+				<div id="userInfo" class="media col-xs-12 col-md-12">
+					<div class="col-md-2"></div>
+			    	<div class="pull-left col-xs-12 col-md-4">
+			      		<img id="personal_img" class="media-object" width="100%"></img>
+			    	</div>
+					<div class="media-body col-xs-12 col-md-4">
+						<h4 class="media-heading">
+						    <div class="item-inline">身分證字號：</div>
+							<div id="userID" class="readUserInfo item-inline"></div>
+						</h4>
+						<div class="form-group">
+						    <div class="item-inline">狀態：</div>
+					    	<div class="item-inline">
+					    		<span id="userStatus"></span>
+					    		<span id="userAction"></span>
+					    	</div>
+						</div>
+						<div class="form-group">
+						    <div class="item-inline">姓名：</div>
+					    	<div id="name" class="readUserInfo item-inline"></div>
+						</div>
+						<div class="form-group">
+						    <div class="item-inline">性別：</div>
+						    <div id="sex" class="readUserInfo item-inline"></div>
+						</div>
+						<div class="form-group">
+						    <div class="item-inline">年齡：</div>
+						    <div id="age" class="readUserInfo item-inline"></div>
+						</div>
+						<div class="form-group worker_info">
+						    <div class="item-inline">工種：</div>
+							<div id="type" class="readUserInfo item-inline"></div>
+						</div>
+						<div class="form-group worker_info">
+						    <div class="item-inline">廠商：</div>						  
+						    <div id="supply" class="readUserInfo item-inline"></div>
+						</div>
+						<div class="form-group item-hide employee_info">
+						    <div class="item-inline">單位：</div>
+						    <div id="org" class="readUserInfo item-inline"></div>
+						</div>
+						<div class="form-group item-hide employee_info">
+						    <div class="item-inline">級職：</div>
+						    <div id="position" class="readUserInfo item-inline"></div>
+						</div>
+					</div>
+				</div>			
+			</div>
+			<!--臨時卡-->
+			<div id="tmpCard-area" class="item-center item-margin-top tab-area text-center">
+				<!--設定鈕-->
+				<div class="pull-right item-menu">
+					<!--選單-->
+					<i id="menuList" class="glyphicon glyphicon-th-list fa-lg mouse-pointer"></i>
+					<!--設定選單-->
+					<div id="tmpCardMenu" class="item-menu-object item-display-n">
+						<div class="list-group">
+						  <a href="#" class="list-group-item" onclick="tmpCardMana(); return false;">
+						  	卡片管理
+						  </a>
+						  <a href="#" class="list-group-item" onclick="tmpCardDataMana(); return false;">
+						  	資料管理
+						  </a>
+						</div>
+					</div>
+				</div>
+				<!--拍照用-->
+				<div id="cameraArea" class="media col-xs-12 col-md-12">
+					
+					<div class="pull-left col-xs-12 col-md-4">
+						<video id="video" width="300" height="240" autoplay></video>
+						<canvas id="canvas" width="300" height="240"></canvas>						
+					</div>
+					<div class="media-body col-xs-12 col-md-7" id="tmpCardForUser">
+						<div class="input-group col-xs-12 col-md-7">
+					 		<span class="input-group-addon">身分證字號</span>
+					  		<input type="text" class="form-control userInput" placeholder="身分證字號" aria-describedby="basic-addon1" id="user_id" name="user_id">
+						</div>
+						<div class="col-xs-12 col-md-7 item-margin-top item-margin-bottom">
+					 		<select class="form-control userInput" id="card_id">
+					 			<option value="0">請選擇臨時卡卡號</option>
+					 		</select>
+						</div>
+						<div class="input-group col-xs-12 col-md-7 item-margin-top">
+					 		<span class="input-group-addon">目的</span>
+					  		<input type="text" class="form-control userInput" placeholder="目的" aria-describedby="basic-addon1" id="purpose" name="purpose">
+						</div>
+						<!--拍照-->
+						<div id="camera" class="col-xs-12 col-md-2">
+							<i class="glyphicon glyphicon-camera fa-2x mouse-pointer" onclick="cameraPlay('video')"></i>
+						</div>
+						<!--拍照確認-->
+						<div id="snap" class="input-group col-xs-12 col-md-2">
+							<i class="glyphicon glyphicon-ok fa-2x mouse-pointer" onclick="camera2photo('canvas','video')"></i>
+						</div>
+						<!--送出-->
+						<div id="saveCardInfo" class="input-group col-xs-12 col-md-2">
+							<i class="fa fa-floppy-o fa-2x mouse-pointer" onclick="toSaveCardInfo();"></i>
+						</div>
+					</div>
+
+				</div>
+				<!--管理區-->
+				<div id="tmpManaArea" class="item-display-n">
+					<!--卡片管理區域-->
+					<div id="tmpCardMana" class="tmpManaArea"></div>
+					<!--資料管理區-->
+					<div id="tmpCardDataMana" class="tmpManaArea"></div>
+				</div>
+			</div>
+
+			<script src="include/js/contentpages/sar/sar.js"></script>
+			<script src="include/js/main/webcamera.js"></script>
+
+		</article>
+		
+	</body>
+</html>

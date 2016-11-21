@@ -1,0 +1,14 @@
+<div>
+	<input type="button" id="new_data" name="new_data" value="新增資料" onclick="newData();">
+</div>
+<div>現有工程項目：</div>
+<div id="dataTree" name="treeData" style="float:left;margin-right:15px"></div>
+<div id="chosenElement" style="display: none" >
+	<label>現在選擇:<span id="chosen" name="chosen" style="color: red"></span><label>
+	<div>
+		<input type="button" id="update_chosen" value="修改選擇" onclick="updateChosen()">
+		<input type="button" id="delete_chosen" value="刪除選擇" onclick="deleteChosen()">
+		<input type="button" id="cancel_chosen" value="取消選擇" onclick="cancelChosen()">
+		<input type="hidden" id="chosen_code" name="chosen_code" value="">
+	</div>
+</div>

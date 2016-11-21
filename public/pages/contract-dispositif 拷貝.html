@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link class="keep" href="../include/css/bootstrap.min.css" rel="stylesheet">
+		<link class="keep" href="../include/css/jquery-ui.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script class="keep" src="../include/js/jquery/jquery.min.js"></script>
+		<script class="keep" src="../include/js/jquery/jquery-ui.min.js"></script>
+		<script>
+			$(function() {
+				$( ".date" ).datepicker({
+					dateFormat: "yy-mm-dd",
+					onSelect: function(dateText, inst) {
+						var dateTmp = dateText.split("-");
+						var dateStr = "民國"+(parseInt(dateTmp[0]) - 1911) + "年"+dateTmp[1]+"月"+dateTmp[2]+"日";
+						$(this).val(dateStr);
+					}
+				});
+				//setInputNumberOnly();
+				  //只能輸入數字
+				  $(".inputNumberOnly").keypress(function(event){
+				    return event.charCode >= 48 && event.charCode <= 57;
+				  });
+			});
+			jQuery(function($){
+				$.datepicker.regional['zh-TW'] = {
+					closeText: '關閉',
+					prevText: '&#x3c;上月',
+					nextText: '下月&#x3e;',
+					currentText: '今天',
+					monthNames: ['一月','二月','三月','四月','五月','六月',
+					'七月','八月','九月','十月','十一月','十二月'],
+					monthNamesShort: ['一','二','三','四','五','六',
+					'七','八','九','十','十一','十二'],
+					dayNames: ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'],
+					dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+					dayNamesMin: ['日','一','二','三','四','五','六'],
+					weekHeader: '周',
+					dateFormat: 'yy/mm/dd',
+					firstDay: 0,
+					isRTL: false,
+					showMonthAfterYear: true,
+					yearSuffix: '年'
+				};
+				$.datepicker.setDefaults($.datepicker.regional['zh-TW']);
+			});
+			
+
+
+			
+		</script>
+	</head>
+	<body>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="工程名稱" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			 <input type="text" class="form-control userInput" placeholder="業主(甲方)" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="廠商(乙方)" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="業主代表人" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="廠商代表人" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="設計單位" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="監造單位" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="專案管理單位" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="契約編號" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="工程地點" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput inputNumberOnly" placeholder="契約總價" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<div class="input-group">
+				<span class="input-group-addon">
+					
+					<input id="work-month" type="radio" checked="checked">
+					<label for="work-month">日曆天</label>
+				</span>
+				<span class="input-group-addon">
+					<input id="work-workday" type="radio">
+					<label for="work-workday">工作天</label>
+				</span>
+				<input type="text" class="form-control userInput date" placeholder="開工日期" aria-describedby="basic-addon2">
+			</div>
+		</div>
+		<div class="well-sm">
+			<input type="number" class="form-control userInput inputNumberOnly" placeholder="工期" aria-describedby="basic-addon2">
+			
+		</div>
+		<div class="well-sm">
+			<input type="number" class="form-control userInput inputNumberOnly" placeholder="估驗計價(以日為單位)" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="進度落後(%)" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="number" class="form-control userInput inputNumberOnly" placeholder="懲罰性違約金" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="逾期罰款每日金額(‰,千分比)" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="number" class="form-control userInput inputNumberOnly" placeholder="預付款" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="保留款比例(%)" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-sm">
+			<input type="text" class="form-control userInput" placeholder="保固金比例(%)" aria-describedby="basic-addon2">
+		</div>
+		<div class="well-lg container">
+			<div class="row">
+				<button type="button" class="btn btn-success col-xs-6 col-md-6">儲存</button>
+				<button type="button" class="btn btn-default col-xs-6 col-md-6">取消</button>
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,1 @@
+var customersAPI =  "customers/";

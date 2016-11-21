@@ -1,0 +1,57 @@
+<div id="nodeUserSetting">
+	
+	<!--節點名稱-->
+  	<div class="form-group col-xs-6 col-md-6">
+  		<h3 id="node-name" class="content-item name-content"></h3>
+  		<input type="text" class="form-control edit-item userInput" id="name"/>
+  	</div>
+  	<div class="form-group col-xs-6 col-md-6 f-right">
+		<i class="glyphicon glyphicon-edit fa-lg mouse-pointer" onclick="toEdit();"></i>
+  	</div>
+	<input type="hidden" id="nodeID">
+	<input type="hidden" id="fid">
+	<div class="item-margin-top">&nbsp;</div>
+	<div class="form-group col-sm-12 code">
+		<label class="col-sm-2 control-label f-right">類別代碼</label>
+		<div class="col-sm-2">
+			<div id="fatherCode" class="f-right">ABC</div>
+		</div>
+		<!--顯示內容-->
+		<div class="col-sm-8 code-content content-item">123</div>
+		<!--編輯區-->
+		<div class="col-sm-8 edit-item">
+			<input type="text" id="code" class="form-control userInput">
+		</div>
+	</div>
+	<div class="form-group col-sm-12 worksid">
+		<label class="col-sm-2 control-label f-right">工種</label>
+		<!--顯示內容-->
+		<div class="col-sm-10 control-label worksid-content content-item"></div>
+		<!--編輯區-->
+		<div class="col-sm-10 edit-item">
+			<select class="form-control userInput" id="worksid">
+				<option value="1">水電</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group col-sm-12 unitid">
+		<label class="col-sm-2 control-label f-right">計數單位</label>
+		<!--顯示內容-->
+		<div class="col-sm-10 control-label unitid-content content-item"></div>
+		<!--編輯區-->
+		<div class="col-sm-10 edit-item">
+			<select class="form-control userInput" id="unitid">
+				<option value="1">甲</option>
+				<option value="2">平方</option>
+				<option value="3">捆</option>
+			</select>
+		</div>
+	</div>
+	<!--編輯按鈕區-->
+	<div class="form-group col-sm-12 edit-item">
+		<div class="col-sm-12 f-right">
+			<i class="fa fa-floppy-o fa-2x mouse-pointer send-btn" onclick="toNodeSettingSave();"></i>
+			<i class="fa fa-times fa-2x mouse-pointer cancel-btn" onclick="toNodeSettingCancel();"></i>
+		</div>
+	</div>
+</div>

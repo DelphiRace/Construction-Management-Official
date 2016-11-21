@@ -1,0 +1,30 @@
+/*.treeViewContent ul,li{
+	list-style:none;
+	margin: 0.5em 0 0 0.5em;
+	font-size: 16px;
+}*/
+.treeContent .fa-caret-right,.fa-caret-down, .treeViewEditorBtn{
+	cursor: pointer;
+}
+.treeViewContent input[type="checkbox"]{
+	margin-right: 0.6em;
+}
+
+.treeViewContent i{
+	margin-right: 0.3em;
+}
+
+.treeViewContent .editorBtnGroup{
+	margin-left: 20px;
+}
+
+.treeViewContent .editorBtnGroup .treeViewEditorBtn{
+	padding-left: 15px;
+}
+.treeViewEditorBtn:hover{
+	color:#00BD39;
+}
+.otherTitle{
+	margin-left: 2em;
+	margin-right: 2em;
+}

@@ -1,0 +1,50 @@
+<li class="qcTableItem list-items-bottom">
+	<div class="contents">
+		<div class="col-xs-12 col-md-12">
+			<div class="col-xs-11 col-md-11 titleShow font-lineHeight"></div>
+			<div class="col-xs-1 col-md-1">
+				<i class="fa fa-sort-up fa-2x mouse-pointer" onclick="hideContents($(this));"></i>
+			</div>
+		</div>
+		<div class="media col-xs-12 col-md-12">
+		  		<!-- 左邊項目 -->
+			<div class="pull-left list-items col-xs-3 col-md-3">
+				<div class="contents list-group-item-heading">
+					<div class="col-xs-12 col-md-12 list-items">
+						<input type="text" class="form-control item-title f20">
+						<select class="qcItemSelect form-control item-display-n" onchange="QCItemSelect($(this))"></select>
+					</div>
+					<div class="col-xs-12 col-md-12 list-items">
+						<div class="item-actionBtn">
+							<i class="fa fa-plus fa-lg send-btn mouse-pointer" onclick="addListContent($(this));"></i>
+							<i class="fa fa-trash fa-lg cancel-btn mouse-pointer" onclick="removeTotalItem($(this));"></i>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-12 list-items">
+						<div class="checkbox">
+						  <label>
+						  	<input type="checkbox" class="aplyQCItemSelect" onchange="QCItemCheckSelect($(this));">
+						  	套用項目範本
+						  </label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 內容 -->
+			<div class="media-body list-items">
+				<div class="list-group none-border">
+					<!--group content start-->
+					<div class="list-group-item none-border item-content">
+						<div class="contents">
+							<div class="col-xs-12 col-md-12">
+								<ol class="item-list item-ol">
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!--group content end-->
+			  	</div>
+			</div>
+		</div>
+	</div>
+</li>

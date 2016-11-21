@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+	<head>	
+	</head>
+	<body>
+		<!-- Post -->
+		<article class="box post">
+			
+			<div id="dailyconstructionList" align="center" style="margin-top: 30px;">
+				
+				<form id="menuSelect">
+					<div>
+		                <span>
+		                    合約:
+		                </span>
+		                <span>
+		                    <select id="worklist" onchange="getDailyList("floor");" class="4u 12u(mobile)">
+		                        <option value="0">請選擇</option>
+		                    </select>
+		                </span>
+		            </div>
+		            <div>
+		                <span>
+		                    樓層:
+		                </span>
+		                <span>
+		                    <select id="floorid" name="floorid" onchange="getDailyList('workitem');" class="4u 12u(mobile)">
+		                        <option value="0">請選擇</option>
+		                    </select>
+		                </span>
+		            </div>
+		            <div>
+		                <span>
+		                    工程項目:
+		                </span>
+		                <span>
+		                    <select id="workitemid" name="workitemid" onchange="getDailyList('pacemodel');" class="4u 12u(mobile)">
+		                        <option value="0">請選擇</option>
+		                    </select>
+		                </span>
+		            </div>
+		            <div>
+		                <span>
+		                    施工流程:
+		                </span>
+		                <span>
+		                    <select id="pacemodelid" name="pacemodelid" onchange="getDailyList('area')" class="4u 12u(mobile)">
+		                        <option value="0">請選擇</option>
+		                    </select>
+		                </span>
+		            </div>
+		            <div>
+		                <span>
+		                    施工部位:
+		                </span>
+		                <span>
+		                    <select id="areaid" name="areaid" onchange="getDailyList('alllist');" class="4u 12u(mobile)">
+		                        <option value="0">請選擇</option>
+		                    </select>
+		                </span>
+		            </div>
+		        </form>
+		       <form id="alllist"></form>
+		       <div><input type="button" class="2u 12u(mobile)" onclick="checkItems();" value="選單確認"></div>
+			</div>
+		</article>
+		<script src="../include/js/page/dailyconstruction.js"></script>		
+	</body>
+</html>

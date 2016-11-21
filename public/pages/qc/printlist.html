@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		
+	    <script src="include/js/jquery/jquery.PrintArea.js"></script>
+	    <script src="include/js/waypoints/jquery.waypoints.min.js"></script>
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<!-- Post -->
+			<article class="box post">
+				<div class="item-center col-xs-12 col-md-12">
+				    <input onclick="print();" type="button" value="列印">
+				    <input onclick="printCancel();" type="button" value="取消">
+				    日期：<select id="d_select"></select>
+				</div>
+				
+				<div id='div_print' align='center' style='margin: 0px auto;'>
+					
+			    	<!--<div id="photolist" class="infinite-container"></div>-->
+				</div>
+				<div class="col-xs-8 col-md-8 item-center">
+					<div id="progressbar" class="item-margin-top">
+						<div class="progress-label">Loading...</div>
+					</div>
+				</div>
+			</article>	
+		</div>
+
+		<script src="include/js/contentpages/qc/printlist.js"></script>
+	</body>
+</html>

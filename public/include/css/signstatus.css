@@ -1,0 +1,62 @@
+.progressBar .processBorder{
+	width: 10em;
+	/*border-left: 1px solid #d5d5da;
+	border-bottom: 1px solid #d5d5da;
+	border-right: 1px solid #d5d5da;*/
+	border: 1px solid #d5d5da;
+}
+.signstatusArea {
+	margin: auto;
+	padding: 20px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+    height: auto;
+    margin-top: 25px;
+}
+
+.progressBar .processContent{
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #d5d5da;
+	margin: 2px;
+}
+.processBorder .date, .processBorder .signStatus{
+	padding: 5px;
+	text-align: center;
+}
+
+.processBorder .done{
+	color: #FFF;
+	background: #81CE97;
+}
+
+.processBorder .ban{
+	color: #FFF;
+	background: #D08383;
+}
+
+.progressBar .bar{
+	height: 5px;
+	border: 1px solid #d5d5da;
+	width: 100px;
+	margin-left: -1px;
+	margin-right: -1px;
+	position: absolute;
+	top: 50%;
+}
+
+.progressBar .bar, .progressBar .processBorder{
+	display: inline-block;
+}
+
+.progressBar-other{
+	margin-left: 98px; 
+}
+
+.progressBar .barDone{
+	background: #81CE97;
+}
+
+.progressBar .barBan{
+	background: #D08383;
+}

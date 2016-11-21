@@ -1,0 +1,22 @@
+<div>
+	<ul class="nav nav-pills" id="node-options">
+		<li role="presentation" class="active"><a href="#" id="node-order">排序</a></li>
+		<li role="presentation"><a href="#" id="inNode">編輯</a></li>
+	</ul>
+	<!--順序-->
+	<div id="node-order-content">
+		<ul id="node-order-sortable" class="list-group">
+		</ul>
+		<div class="pull-right">
+			<i class="fa fa-floppy-o fa-2x mouse-pointer send-btn"></i>
+		</div>
+	</div>
+	<!--節點-->
+	<div id="inNode-content" class="item-display-n">
+		<ul id="inNode-sortable" class="list-group">
+		</ul>
+		<div class="pull-right">
+			<i class="fa fa-floppy-o fa-2x mouse-pointer send-btn" onclick="setChildItemSeq();"></i>
+		</div>
+	</div>
+</div>

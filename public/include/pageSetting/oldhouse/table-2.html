@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../include/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../include/css/bootstrap.min.css">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<!-- jQuery -->
+		<script src="../include/js/jquery/jquery.min.js"></script>
+		
+		<!-- <script src="../include/js/jquery/jquery.scrolly.min.js"></script>
+		<script src="../include/js/jquery/jquery.scrollzer.min.js"></script>
+		<script src="../include/js/jquery/skel.min.js"></script>		
+		<script src="../include/js/main/main.js"></script> -->
+		
+		<!-- Bootstrap JavaScript -->
+		<script src="../include/js/bootstrap/bootstrap.min.js"></script>
+		<style>
+			body{
+				/*padding-top:60px;*/
+				padding-bottom:20px;
+			}
+			.table-backcolor{
+				background: #F2F2F2;
+				border: 1px solid #E6E6E6;
+				box-shadow:0px 0px 20px -4px rgba(20%,20%,40%,0.6);
+			}
+			.table-radius{
+				border-radius: 5px;
+			}
+			.table-border{
+				border: 1px solid #000;
+			}
+			.f10{
+				font-size: 10px !important;
+			}
+			.f15{
+				font-size: 15px !important;
+			}
+			.f20{
+				font-size: 20px !important;
+			}
+			.padding-l{
+				padding-left: 8%;
+			}
+			.none-border{
+				border-style: none;
+			}
+			.h100{
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			 <div class="row">
+			 	<div class="col-xs-12 col-md-12">
+			 		<h2 class="text-center">老屋結構健檢紀錄表</h2>
+			 		<table class="table table-bordered">
+			 			<tr>
+				 			<th rowspan="2" class="col-xs-1 col-md-1">聯絡人</th>
+				 			<td rowspan="2" class="col-xs-4 col-md-4">@@owner@@</td>
+				 			<th rowspan="2" class="col-xs-1 col-md-1">聯絡電話</th>
+				 			<th class="col-xs-1 col-md-1">市話</th>
+				 			<td>@@tel@@</td>
+			 			</tr>
+			 			<tr>
+				 			<th>手機</th>
+				 			<td>@@mobile@@</td>
+			 			</tr>
+			 			<tr>
+				 			<th>房屋地址</th>
+				 			<td colspan="4">@@addr@@</td>
+			 			</tr>
+					</table>
+					<table class="table table-bordered">
+			 			<tr>
+				 			<th rowspan="3" class="col-xs-1 col-md-1">建物基本資料</th>
+				 			<th class="col-xs-1 col-md-1">建物類別</th>
+				 			<td>@@strType@@</td>
+				 			<td class="col-xs-1 col-md-1">檢驗日期</td>
+				 			<td>@@date@@</td>
+			 			</tr>
+			 			<tr>
+				 			<th>建物規模</th>
+				 			<td>@@scale@@</td>
+				 			<td>檢驗技師</td>
+				 			<td>@@ename@@</td>
+			 			</tr>
+			 			<tr>
+				 			<th>結構型態</th>
+				 			<td>@@type@@</td>
+				 			<td>技師證號</td>
+				 			<td>@@license@@</td>
+			 			</tr>
+					</table>
+					<table class="table table-bordered text-center">
+			 			<tr>
+				 			<th class="col-xs-1 col-md-1 text-center">序號</th>
+				 			<th class="col-xs-1 col-md-1 text-center">部位</th>
+				 			<th class="col-xs-2 col-md-2 text-center">受損型態</th>
+				 			<th class="col-xs-1 col-md-1 text-center">量化值</th>
+				 			<th class="col-xs-2 col-md-2 text-center">備註</th>
+				 			<th class="col-xs-2 col-md-2 text-center">照片</th>
+				 			<th class="col-xs-3 col-md-3 text-center">危險等級</th>
+			 			</tr>
+			 			<!--量化範圍-->
+			 			@@quantity@@
+			 			<!--質化範圍-->
+			 			@@quality@@
+			 			<!--質化範圍結束-->
+					</table>
+			 		
+			 	</div>
+			 </div>
+		</div>
+	</body>
+</html>

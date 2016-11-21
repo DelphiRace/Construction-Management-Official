@@ -1,0 +1,99 @@
+.progressBar {
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+}
+.progressBar .circle,
+.progressBar .bar {
+	display: inline-block;
+	background: #fff;
+	width: 40px; 
+	height: 40px;
+	border-radius: 40px;
+	border: 1px solid #d5d5da;
+	margin-left: 4px;
+    margin-right: 4px;
+}
+.progressBar .bar {
+	position: relative;
+	width: 80px;
+	height: 6px;
+	top: -43px;
+	margin-left: -5px;
+	margin-right: -5px;
+	border-left: none;
+	border-right: none;
+	border-radius: 0;
+}
+.progressBar .circle .label {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 32px;
+	margin-top: 3px;
+	color: #b5b5ba;
+	font-size: 17px;
+}
+
+.progressBar .circle .title {
+	color: #b5b5ba;
+	font-size: 13px;
+	line-height: 30px;
+	margin-left: -5px;
+    width: 4em;
+}
+.progressBar .circle .data {
+	font-size: 13px;
+    line-height: 30px;
+    margin-left: -18px;
+    position: absolute;
+    top: 25px;
+}
+.progressBar .circle .signData {
+	font-size: 13px;
+    line-height: 30px;
+    margin-left: -33px;
+    position: absolute;
+    top: 100px;
+}
+/* Done / Active */
+.progressBar .bar.done,
+.progressBar .circle.done {
+	background: #eee;
+}
+
+.progressBar .circle.ban {
+	background: #eee;
+}
+.progressBar .bar.active {
+	background: linear-gradient(to right, #EEE 40%, #FFF 60%);
+}
+.progressBar .circle.done .label {
+	color: #FFF;
+	background: #81CE97;
+	box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+
+.progressBar .circle.ban .label {
+	color: #FFF;
+	background: #D08383;
+	box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+
+.progressBar .circle.done .overDataLabel {
+	color: #FFF;
+	background: #D08383;
+	box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+.progressBar .circle.done .title {
+	color: #444;
+}
+.progressBar .circle.active .label {
+	color: #FFF;
+	background: #0c95be;
+	box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+.progressBar .circle.active .title {
+	color: #0c95be;
+}

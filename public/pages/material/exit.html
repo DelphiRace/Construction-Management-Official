@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="include/js/jquery/jquery-combobox.js"></script>
+    <style type="text/css">
+      fieldset {
+        padding:10px;
+        margin:10px;
+        border:#06c dashed 1px;
+      } 
+
+      .css_table {
+        display:table;
+      }
+      .css_tr {
+        display: table-row;
+      }
+      .css_td {
+        display: table-cell;
+        margin:auto 5px auto 5px;
+      }
+      tr,td,th,table{
+        border:1px #cccccc solid ;
+        vertical-align:middle;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Post -->
+    <article class="box post">
+      <div class="text-center">
+        <h3>材料出場清單狀態</h3>
+      </div>
+      <!--tab選單-->
+      <ul class="nav nav-tabs" id="optionTab">
+        <li role="presentation" class="active">
+          <a href="#" id="of-items-exit">不合格物料出場申請</a>
+        </li>
+        <li role="presentation">
+          <a href="#" id="surplus-items-exit">剩餘物料出場申請</a>
+        </li>
+        <li role="presentation">
+          <a href="#" id="other-items-exit">其他出場申請</a>
+        </li>
+      </ul>
+      <!--tab選單結束-->
+
+      <!--合約物料出場-->
+      <div id="of-items-exit_content" class="tab_content">
+        <!--選單內容-->
+        <div class="col-md-12">
+          <!--新增-->
+          <i class="fa fa-plus fa-lg mouse-pointer" onclick="showArea('apply_exPet','exitList_content');"></i>
+        </div>
+        
+        <div class="row item-margin-bottom item-display-n" id="apply_exPet">
+          <div class="col-md-5">
+            <div class="form-group">
+              <label class="col-xs-3 col-md-3 control-label f-right">品項</label>
+              <div class="col-xs-8 col-md-8">
+                <select class="form-control" id="of-items">
+                  <option value="">品項</option>
+                </select>
+              </div>
+              <div class="col-xs-1 col-md-1">
+                <i class="fa fa-search fa-lg mouse-pointer" id="of-search"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="form-group">
+              <label class="col-md-2 control-label">進場日期</label>
+              <div class="col-md-4">
+                <input type="text" id="start_date" class="form-control input-width-85 item-inline">
+              </div>
+              <div class="col-xs-1 col-md-1">
+                ~
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="end_date" class="form-control input-width-85 item-inline">
+              </div>
+              <div class="col-xs-1 col-md-1">
+                <i class="fa fa-search fa-lg mouse-pointer" id="date_search"></i>
+              </div>
+            </div>
+            
+          </div>
+         <!-- <div class="col-sm-6 item-search">
+            <input type="text" class="form-control pull-left" placeholder="訂單編號"/>
+            <div class="seachIcon">
+              <i class="fa fa-search fa-lg"></i>
+            </div>
+          </div>
+          <div class="col-sm-12 item-display-n" id="msg_add">
+            <p class="item-bg-danger" id="msg_add_content"></p>
+          </div>-->
+          <!--新增-->
+          <div id="search_content" class="col-md-12">
+            <table id="tbList" class="table table-hover item-border table-th-center table-td-center"></table>
+            <!--頁數選單-->
+            <div class="col-xs-12 col-md-12 text-center">
+              <div class="btn-toolbar btn-color-bk" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="Third group">
+                  <button type="button" class="btn btn-default gotoFirstPageBtn" id="toFirstPage"> « </button>
+                </div>
+                <div class="btn-group" role="group" aria-label="First group" id="pageTab">
+                  <button type="button" class="btn btn-default">1</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Third group">
+                  <button type="button" class="btn btn-default gotoEndPageBtn" id="toEndPage"> » </button>
+                </div>
+              </div>
+            </div>
+            <div id="dialog"></div>
+          </div>
+          <!--新增結束-->
+        </div>
+        
+        <div id="exitList_content">
+          <!--申請退場列表-->
+          <table id="exitPetList" class="table table-hover item-border table-th-center table-td-center"></table>
+          <!--申請退場結束-->
+          <!--頁數選單-->
+          <div class="col-xs-12 col-md-12 text-center">
+            <div class="btn-toolbar btn-color-bk" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group" role="group" aria-label="Third group">
+                <button type="button" class="btn btn-default gotoFirstPageBtn" id="toExitPetFirstPage"> « </button>
+              </div>
+              <div class="btn-group" role="group" aria-label="First group" id="toExitPetpageTab">
+                <button type="button" class="btn btn-default">1</button>
+              </div>
+              <div class="btn-group" role="group" aria-label="Third group">
+                <button type="button" class="btn btn-default gotoEndPageBtn" id="toExitPetEndPage"> » </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--合約物料結束-->
+      <!--剩餘物料出場-->
+      <div id="surplus-items-exit_content" class="tab_content item-display-n">
+        <!--選單內容-->
+        <div class="col-md-12">
+          <!--新增-->
+          <i class="fa fa-plus fa-lg mouse-pointer" onclick="showArea('surplus_apply','surplusList');"></i>
+        </div>
+        <!--新增-->
+        <div id="surplus_apply" class="item-display-n">
+          <div class="col-xs-12 col-md-12">
+            <!--選項-->
+            <div class="form-group">
+              <label class="col-xs-2 col-md-2 control-label f-right">品項</label>
+              <div class="col-xs-10 col-md-10">
+                <!--quid-->
+                <select class="form-control surplus_input" id="surplus-items">
+                  <option value="">品項</option>
+                </select>
+              </div>
+            </div>
+            <!--選項結束-->
+            <!--數量-->
+            <div class="form-group">
+              <label class="col-xs-2 col-md-2 control-label f-right">數量</label>
+              <div class="col-xs-10 col-md-10">                
+                <input type="text" id="quantity" class="form-control surplus_input">
+              </div>
+            </div>
+            <!--數量結束-->
+            <!--預計出場日期-->
+            <div class="form-group">
+              <label class="col-xs-2 col-md-2 control-label f-right">預計出場日期</label>
+              <div class="col-xs-10 col-md-10">                
+                <input type="text" id="surplus_exit" class="form-control surplus_input input-width-85 item-inline">
+              </div>
+            </div>
+            <!--預計出場日期結束-->
+            <div class="form-group">
+              <div class="col-xs-12 col-md-12 f-right">
+                <i class="glyphicon glyphicon-ok fa-lg mouse-pointer send-btn" onclick="exitSurplusApply();"></i>
+              </div>
+            </div>
+            <div id="surplus-msg" class="item-bg-danger"></div>
+          </div>
+        </div>
+        <!--新增結束-->
+        <div id="surplusList">
+        <!--剩餘物料申請退場列表-->
+          <table id="exitSurplusList" class="table table-hover item-border table-th-center table-td-center"></table>
+        <!--剩餘物料申請退場結束-->
+          <!--頁數選單-->
+          <div class="col-xs-12 col-md-12 text-center">
+            <div class="btn-toolbar btn-color-bk" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group" role="group" aria-label="Third group">
+                <button type="button" class="btn btn-default gotoFirstPageBtn" id="toExitSurplusFirstPage"> « </button>
+              </div>
+              <div class="btn-group" role="group" aria-label="First group" id="toExitSurpluspageTab">
+                <button type="button" class="btn btn-default">1</button>
+              </div>
+              <div class="btn-group" role="group" aria-label="Third group">
+                <button type="button" class="btn btn-default gotoEndPageBtn" id="toExitSurplusEndPage"> » </button>
+              </div>
+            </div>
+          </div>
+          <!--頁數選單結束-->
+        </div>
+      </div>
+      <!--剩餘物料出場結束-->
+      <!--其他出場-->
+      <div id="other-items-exit_content" class="tab_content item-display-n">
+        <!--選單內容-->
+        <div class="col-md-12">
+          <!--新增-->
+          <i class="fa fa-plus fa-lg mouse-pointer" onclick="showArea('other_apply','otherList');"></i>
+        </div>
+        <!--新增-->
+        <div id="other_apply" class="item-display-n">
+          <div class="col-xs-12 col-md-12">
+            <!--選項-->
+            <div class="form-group">
+              <label class="col-xs-2 col-md-2 control-label f-right">出場項目</label>
+              <div class="col-xs-10 col-md-10">
+                <!--quid-->
+                <select class="form-control surplus_input" id="other-items">
+                  <option value="">出場項目</option>
+                </select>
+              </div>
+            </div>
+            <!--選項結束-->
+            <!--預計出場日期-->
+            <div class="form-group">
+              <label class="col-xs-2 col-md-2 control-label f-right">預計出場日期</label>
+              <div class="col-xs-10 col-md-10">                
+                <input type="text" id="other_exit" class="form-control input-width-85 item-inline">
+              </div>
+            </div>
+            <!--預計出場日期結束-->
+            <!--數量-->
+            <div class="form-group">
+              <label class="col-xs-2 col-md-2 control-label f-right">數量</label>
+              <div class="col-xs-10 col-md-10">                
+                <input type="text" id="other-quantity" class="form-control other_input">
+              </div>
+            </div>
+            <!--數量結束-->
+            
+            <div class="form-group">
+              <div class="col-xs-12 col-md-12 f-right">
+                <i class="glyphicon glyphicon-ok fa-lg mouse-pointer send-btn" onclick="exitOtherApply();"></i>
+              </div>
+            </div>
+            <div id="other-msg" class="item-bg-danger"></div>
+          </div>
+        </div>
+        <!--新增結束-->
+        <div id="otherList">
+        <!--剩餘物料申請退場列表-->
+          <table id="exitOtherList" class="table table-hover item-border table-th-center table-td-center"></table>
+        <!--剩餘物料申請退場結束-->
+          <!--頁數選單-->
+          <div class="col-xs-12 col-md-12 text-center">
+            <div class="btn-toolbar btn-color-bk" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group" role="group" aria-label="Third group">
+                <button type="button" class="btn btn-default gotoFirstPageBtn" id="toExitOtherFirstPage"> « </button>
+              </div>
+              <div class="btn-group" role="group" aria-label="First group" id="toExitOtherpageTab">
+                <button type="button" class="btn btn-default">1</button>
+              </div>
+              <div class="btn-group" role="group" aria-label="Third group">
+                <button type="button" class="btn btn-default gotoEndPageBtn" id="toExitOtherEndPage"> » </button>
+              </div>
+            </div>
+          </div>
+          <!--頁數選單結束-->
+        </div>
+      </div>
+      <!--其他出場結束-->
+    </article>  
+    <!--<script src="include/js/page/material/list.js"></script>-->
+    <script src="include/js/contentpages/material/exit.js"></script>
+  </body>
+</html>
